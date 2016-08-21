@@ -1,5 +1,7 @@
 # RSAS Removed Steganography Application Scanner
 
+### *Forensic Steganalysis Triage by Detecting Artifacts of Removed Applications*
+
 University of Kent, UK (2016)
 
 School of Computing (cs.kent.ac.uk)
@@ -16,6 +18,12 @@ Supervisor:
 ## RSAS is a forensic software which scans the system for traces of removed applications.
 
 RSAS uses a database of forensic artifacts which are left in the system after the removal of Steganography applications, to determine whether any of the applications in the database has ever been run in the target system. This operation is known as Forensic Steganalysis Triage and provides to the investigator in few seconds a report of which Steganography applications have been run in the system, even if such applications have been uninstalled or deleted.
+
+DISCLAIMER:
+> The software comes as it is and the authors and the University of Kent take no responsibilities for any damange or consequence of using this software.
+
+LICENSE:
+> This software and its source code are available under [GPL v.3 License](./LICENSE)
 
 
 
@@ -47,12 +55,17 @@ or you can find it here on /redist/wincrt-redistributable/
 
 Please select the correct installation file for your target os version:
 
-* Windows6.0 corresponds to Windows Vista
-* Windows6.1 corresponds to Windows 7
-* Windows8 and Windows8.1 are self-descriptive
-* Windows10 should not need this update.
-
-Please notice that each packet comes in x86 version, for 32-bit versions of Windows, and x64 version, for 64-bit versions of Windows.
+| Version of Windows in your taget system        | Update Installation File        | 
+|------------------------------------------------|---------------------------------|
+| Windows Vista 32-bit (not supported by RSAS)   | `Windows6.0-KB2999226-x86.msu`  |
+| Windows Vista 64-bit (not supported by RSAS)   | `Windows6.0-KB2999226-x64.msu`  |
+| Windows 7 32-bit                               | `Windows6.1-KB2999226-x86.msu`  |
+| Windows 7 64-bit                               | `Windows6.1-KB2999226-x64.msu`  |
+| Windows 8.0 (32-bit)                           | `Windows8-RT-KB2999226-x86.msu` |
+| Windows 8.0 (64-bit)                           | `Windows8-RT-KB2999226-x64.msu` |
+| Windows 8.1 (32-bit)                           | `Windows8.1-KB2999226-x86.msu`  |
+| Windows 8.1 (64-bit)                           | `Windows8.1-KB2999226-x64.msu`  |
+| Windows 10 (any)                               | *update not needed*             |
 
 After installing the update, you should not need to reboot the system to be able to use RSAS.
 
