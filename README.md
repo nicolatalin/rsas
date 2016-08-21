@@ -29,7 +29,7 @@ RSAS works on Windows 7, 8 and 10.
 
 In most cases you will just need:
 
-/dist/rsas.exe
+  `/dist/rsas.exe`
 
 
 
@@ -60,25 +60,25 @@ After installing the update, you should not need to reboot the system to be able
 
 ### DATABASE CUSTOMISATION:
 
-/dist/rsas.exe embeds the artifacts database.
+`/dist/rsas.exe` embeds the artifacts database.
 
-Before using the embedded database, rsas.exe will look in the folder where itself is currently located for a rsas.sqlite3 file. If present, RSAS will attempt to use such external file as artifact database, instead of the embedded one.
+Before using the embedded database, `rsas.exe` will look in the folder where itself is currently located for a `rsas.sqlite3` file. If present, RSAS will attempt to use such external file as artifact database, instead of the embedded one.
 
 This allows the investigators to use their customised artifacts database.
 
 To customise your artifacts database please do as follows:
 
-* copy /data/rsas.sqlite3 on your favorite location. This is a copy of the same database embedded in rsas.exe
-* open and edit your copy of rsas.sqlite3 using a tool such as SQLite Studio (http://sqlitestudio.pl/)
-* make sure your version of rsas.sqlite3 is located in the same folder as rsas.exe, if you wish rsas.exe to use your database. Move rsas.sqlite3 in a different location to make rsas.exe use the embedded database again.
+* copy `/data/rsas.sqlite3` on your favorite location. This is a copy of the same database embedded in `rsas.exe`
+* open and edit your copy of `rsas.sqlite3` using a tool such as [SQLite Studio](http://sqlitestudio.pl/)
+* make sure your version of `rsas.sqlite3` is located in the same folder as `rsas.exe`, if you wish `rsas.exe` to use your database. Move `rsas.sqlite3` in a different location to make `rsas.exe` use the embedded database again.
 
 
 
 ### EDITING THE DATABASE:
 
 RSAS does not come yet with a database-editing functionality.
-Please use a tools such as SQLite Studio (http://sqlitestudio.pl/) to edit the database.
-The tables you are likely to be interested in editing are 'artifacts' and 'apps'.
+Please use a tools such as [SQLite Studio](http://sqlitestudio.pl/) to edit the database.
+The tables you are likely to be interested in editing are `artifacts` and `apps`.
 
 
 #### The `apps` table:
@@ -116,7 +116,7 @@ For **Type-2000 artifacts (registry artifacts)**, the PATH field is used to desc
 The use of the wildcard `*` is allowed.
 Please make sure the path starts with one of the following short names for the main keys:
 
-| Short name to be used | Main Registry Ke  y          |
+| Short name to be used | Main Registry Key            |
 |-----------------------|------------------------------|
 | `HKU`                 | `HKEY_USERS`                 |
 | `HKCU`                | `HKEY_CURRENT_USER`          |
@@ -140,7 +140,7 @@ Any other field in the artifacts table is not currently used by RSAS. It might b
 
 ### SOURCE CODE:
 
-RSAS is developed in Python v3.5 using Object-Oriented Programming.
+RSAS is developed in [Python v3.5](https://www.python.org) using [Object-Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming).
 
 The Python code is included in the folder `/src/` and the main file `/rsas.py`
 
@@ -151,13 +151,13 @@ The code is organised in 4 packages:
 | `src.cli` | for the **Command Line Interface**                |
 | `src.gui` | for the **Graphical User Interface**              |
 | `src.lib` | contains the **main libraries**, including `CONST`, `Scanner` and all the Object Classes used by `Scanner` such as `Apps`, `ArtifactRule`, and so on |
-| `src.db` | contanis libraries providing an **interface between RSAS and the chosen database** (SQLite v.3) |
+| `src.db` | contanis libraries providing an **interface between RSAS and the chosen database** ([SQLite v.3](https://sqlite.org/)) |
 
 
 
 ### DATABASE:
 
-RSAS uses an SQLite v.3 database containing the Artifact descriptions that RSAS will use to look in the system for traces of removed applications.
+RSAS uses an [SQLite v.3](https://sqlite.org/) database containing the Artifact descriptions that RSAS will use to look in the system for traces of removed applications.
 
 The database is stored in `/data/rsas.sqlite3`
 
@@ -165,18 +165,18 @@ The database is stored in `/data/rsas.sqlite3`
 
 ### DISTRIBUTABLE:
 
-The distributable version of the application is a single Windows executable file generated using PyInstaller (pyinstaller.org) and stored in `/dist/rsas.exe`
+The distributable version of the application is a single Windows executable file generated using [PyInstaller](http://www.pyinstaller.org/) and stored in `/dist/rsas.exe`
 
 In case you wish to modify the Python code and/or the SQLite DB, please build your new version of rsas.exe using the following command from the Windows Command Prompt:
 
 `pyinstaller -F rsas.spec`
 
 Plase make sure first that:
-* Python 3.5 and PyInstaller are propertly installed and configured in your system
+* [Python 3.5](https://www.python.org/) and [PyInstaller](http://www.pyinstaller.org/)are propertly installed and configured in your system
 * your current working directory is the main directory of the *rsas* project
-* you are not using the WRONG command `pyinstaller -F rsas.py`, as such command would regenerate the `rsas.spec` file, and the SQLite database would **NOT** be embedded in your `rsas.exe`
+* you are not using the **WRONG** command `pyinstaller -F rsas.py`, as such command would re-generate the `rsas.spec` file, and the [SQLite v.3](https://sqlite.org/) database would **NOT** be embedded in your `rsas.exe`
 
-Please note that the `/build/` folder is created and used automatically by PyInstaller.
+Please note that the `/build/` folder is created and used automatically by [PyInstaller](http://www.pyinstaller.org/).
 
 
 21 Aug 2016
