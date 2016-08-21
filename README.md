@@ -23,7 +23,7 @@ DISCLAIMER:
 > The software comes as it is and the authors and the University of Kent take no responsibilities for any damange or consequence of using this software.
 
 LICENSE:
-> This software and its source code are available under [GPL v.3 License](./LICENSE)
+> This software and its source code are available under [GPL v.3 License](https://github.com/nicolatalin/rsas/LICENSE)
 
 
 
