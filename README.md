@@ -4,7 +4,7 @@
 
 University of Kent, UK (2016)
 
-School of Computing (cs.kent.ac.uk)
+School of Computing ([cs.kent.ac.uk](http://cs.kent.ac.uk))
 
 Author:
    Mr Nicola Talin
