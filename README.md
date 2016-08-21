@@ -81,7 +81,7 @@ This allows the investigators to use their customised artifacts database.
 
 To customise your artifacts database please do as follows:
 
-* copy `/data/rsas.sqlite3` on your favorite location. This is a copy of the same database embedded in `rsas.exe`
+* copy [`/data/rsas.sqlite3`](./data/rsas.sqlite3) on your favorite location. This is a copy of the same database embedded in `rsas.exe`
 * open and edit your copy of `rsas.sqlite3` using a tool such as [SQLite Studio](http://sqlitestudio.pl/)
 * make sure your version of `rsas.sqlite3` is located in the same folder as `rsas.exe`, if you wish `rsas.exe` to use your database. Move `rsas.sqlite3` in a different location to make `rsas.exe` use the embedded database again.
 
