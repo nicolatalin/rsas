@@ -51,7 +51,7 @@ If this is the case, you will need to install in the target system the Windows U
 
 You can download it from the official Microsoft website: https://support.microsoft.com/en-gb/kb/2999226
 
-or you can find it here on /redist/wincrt-redistributable/
+or you can find it here on [/redist/wincrt-redistributable/](./redist/wincrt-distributable/)
 
 Please select the correct installation file for your target os version:
 
