@@ -12,10 +12,10 @@ class RegKey:
         self.__keypath = keypath
         self.__tree = None
         self.__mainkeys = {
-            'HKCR': winreg.HKEY_CLASSES_ROOT,
-            'HKCU': winreg.HKEY_CURRENT_USER,
-            'HKLM': winreg.HKEY_LOCAL_MACHINE,
             'HKU': winreg.HKEY_USERS,
+            'HKCU': winreg.HKEY_CURRENT_USER,
+            'HKCR': winreg.HKEY_CLASSES_ROOT,
+            'HKLM': winreg.HKEY_LOCAL_MACHINE,
             'HKPD': winreg.HKEY_PERFORMANCE_DATA,
             'HKCC': winreg.HKEY_CURRENT_CONFIG,
             'HKDD': winreg.HKEY_DYN_DATA
