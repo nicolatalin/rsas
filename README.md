@@ -1,5 +1,5 @@
 # rsas
-RSAS Removed Steganography Application Scanner
+# RSAS Removed Steganography Application Scanner
 
 University of Kent, UK (2016)
 
@@ -14,19 +14,19 @@ Supervisor:
    jch27@kent.ac.uk
 
 
-RSAS is a forensic software which scans the system for traces of removed applications.
+## RSAS is a forensic software which scans the system for traces of removed applications.
 
 RSAS uses a database of forensic artifacts which are left in the system after the removal of Steganography applications, to determine whether any of the applications in the database has ever been run in the target system. This operation is known as Forensic Steganalysis Triage and provides to the investigator in few seconds a report of which Steganography applications have been run in the system, even if such applications have been uninstalled or deleted.
 
 
 
-===== INSTRUCTIONS FOR USERS:  =====
+## ===== INSTRUCTIONS FOR USERS:  =====
 
 
 RSAS works on Windows 7, 8 and 10.
 
 
-WHICH FILE IS THE DISTRIBUTABLE AND EXECUTABLE VERSION OF RSAS:
+### WHICH FILE IS THE DISTRIBUTABLE AND EXECUTABLE VERSION OF RSAS:
 
 In most cases you will just need:
 
@@ -34,7 +34,7 @@ In most cases you will just need:
 
 
 
-DEPENDENCY ISSUES:
+### DEPENDENCY ISSUES:
 
 On Windows 8.1 or earlier, RSAS might throw this error when started:
 
@@ -59,7 +59,7 @@ After installing the update, you should not need to reboot the system to be able
 
 
 
-DATABASE CUSTOMISATION:
+### DATABASE CUSTOMISATION:
 
 /dist/rsas.exe embeds the artifacts database.
 
@@ -75,21 +75,21 @@ To customise your artifacts database please do as follows:
 
 
 
-EDITING THE DATABASE:
+### EDITING THE DATABASE:
 
 RSAS does not come yet with a database-editing functionality.
 Please use a tools such as SQLite Studio (http://sqlitestudio.pl/) to edit the database.
 The tables you are likely to be interested in editing are 'artifacts' and 'apps'.
 
 
-The APPS table:
+#### The APPS table:
 
 You will be interested in the fields ID and NAME.
 Please make sure ID is a unique positive integer and NAME is a string without unusual characters.
 Any other field in the table is not used so far by RSAS, but you might be interested in using them for your own records, as you can save author, link, and other detais for each application.
 
 
-The ARTIFACTS table:
+#### The ARTIFACTS table:
 
 Each artifact description identifies one or more artifacts in the system which belongs to a specific application from the APPS table.
 
@@ -117,13 +117,15 @@ For Type-2000 artifacts (registry artifacts), the PATH field is used to describe
 The use of the wildcard '*' is allowed.
 Please make sure the path starts with one of the following short names for the main keys:
 
-* 'HKCR' for HKEY_CLASSES_ROOT,
-* 'HKCU' for HKEY_CURRENT_USER,
-* 'HKLM' for HKEY_LOCAL_MACHINE,
-* 'HKU'  for HKEY_USERS,
-* 'HKPD' for HKEY_PERFORMANCE_DATA,
-* 'HKCC' for HKEY_CURRENT_CONFIG,
-* 'HKDD' for HKEY_DYN_DATA
+| Short name to be used | Main Registry Key          |
+|-----------------------|----------------------------|
+| HKCR                  | HKEY_CLASSES_ROOT          |
+| HKU                   | HKEY_USERS                 |
+| HKCU                  | HKEY_CURRENT_USER          |
+| HKLM                  | HKEY_LOCAL_MACHINE         |
+| HKPD                  | HKEY_PERFORMANCE_DATA      |
+| HKCC                  | HKEY_CURRENT_CONFIG        |
+| HKDD                  | HKEY_DYN_DATA              |
 
 Usually, rather than using HKCU\your\path, it is preferrable to use HKU\*\your\path, as this will look into \your\path for the HKEY\{ID}\ key of each user, while HKCU is a link to the HKEY\{ID}\ key of just the current user, which might not be the user which used the application you are scanning for.
 
@@ -134,10 +136,10 @@ Any other field in the artifacts table is not currently used by RSAS. It might b
 
 
 
- ===== INSTRUCTIONS FOR DEVELOPERS: =====
+## ===== INSTRUCTIONS FOR DEVELOPERS: =====
 
 
-SOURCE CODE:
+### SOURCE CODE:
 
 RSAS is developed in Python v3.5 using Object-Oriented Programming.
 
@@ -151,7 +153,7 @@ The code is organised in 4 packages:
 
 
 
-DATABASE:
+### DATABASE:
 
 RSAS uses an SQLite v.3 database containing the Artifact descriptions that RSAS will use to look in the system for traces of removed applications.
 
@@ -159,7 +161,7 @@ The database is stored in /data/rsas.sqlite3
 
 
 
-DISTRIBUTABLE:
+### DISTRIBUTABLE:
 
 The distributable version of the application is a single Windows executable file generated using PyInstaller (pyinstaller.org) and stored in /dist/rsas.exe
 
