@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="UTF-8">
+    <title>RSAS by nicolatalin</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
+  </head>
+  <body>
+    <section class="page-header">
+      <h1 class="project-name">RSAS</h1>
+      <h2 class="project-tagline">RSAS Removed Steganography Application Scanner</h2>
+      <a href="https://github.com/nicolatalin/rsas" class="btn">View on GitHub</a>
+      <a href="https://github.com/nicolatalin/rsas/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/nicolatalin/rsas/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
+
+    <section class="main-content">
+      <h1>
+<a id="rsas-removed-steganography-application-scanner" class="anchor" href="#rsas-removed-steganography-application-scanner" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RSAS Removed Steganography Application Scanner</h1>
+
+<h3>
+<a id="forensic-steganalysis-triage-by-detecting-artifacts-of-removed-applications" class="anchor" href="#forensic-steganalysis-triage-by-detecting-artifacts-of-removed-applications" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><em>Forensic Steganalysis Triage by Detecting Artifacts of Removed Applications</em>
+</h3>
+
+<p>University of Kent, UK (2016)</p>
+
+<p>School of Computing (cs.kent.ac.uk)</p>
+
+<p>Author:
+   Mr Nicola Talin
+   <a href="mailto:nt271@kent.ac.uk">nt271@kent.ac.uk</a></p>
+
+<p>Supervisor:
+   Dr Julio C. Hernandez-Castro
+   <a href="mailto:jch27@kent.ac.uk">jch27@kent.ac.uk</a></p>
+
+<h2>
+<a id="rsas-is-a-forensic-software-which-scans-the-system-for-traces-of-removed-applications" class="anchor" href="#rsas-is-a-forensic-software-which-scans-the-system-for-traces-of-removed-applications" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RSAS is a forensic software which scans the system for traces of removed applications.</h2>
+
+<p>RSAS uses a database of forensic artifacts which are left in the system after the removal of Steganography applications, to determine whether any of the applications in the database has ever been run in the target system. This operation is known as Forensic Steganalysis Triage and provides to the investigator in few seconds a report of which Steganography applications have been run in the system, even if such applications have been uninstalled or deleted.</p>
+
+<p>DISCLAIMER:</p>
+
+<blockquote>
+<p>The software comes as it is and the authors and the University of Kent take no responsibilities for any damange or consequence of using this software.</p>
+</blockquote>
+
+<p>LICENSE:</p>
+
+<blockquote>
+<p>This software and its source code are available under <a href="./LICENSE">GPL v.3 License</a></p>
+</blockquote>
+
+<h2>
+<a id="-instructions-for-users--" class="anchor" href="#-instructions-for-users--" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>===== INSTRUCTIONS FOR USERS:  =====</h2>
+
+<p>RSAS works on Windows 7, 8 and 10.</p>
+
+<h3>
+<a id="which-file-is-the-distributable-and-executable-version-of-rsas" class="anchor" href="#which-file-is-the-distributable-and-executable-version-of-rsas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>WHICH FILE IS THE DISTRIBUTABLE AND EXECUTABLE VERSION OF RSAS:</h3>
+
+<p>In most cases you will just need:</p>
+
+<p><code>/dist/rsas.exe</code></p>
+
+<h3>
+<a id="dependency-issues" class="anchor" href="#dependency-issues" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DEPENDENCY ISSUES:</h3>
+
+<p>On Windows 8.1 or earlier, RSAS might throw this error when started:</p>
+
+<blockquote>
+<p>The program can't start because api-ms-win-crt-math-l1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.</p>
+</blockquote>
+
+<p>If this is the case, you will need to install in the target system the Windows Update Package KB2999226, which provides WinUCRT (Windows Universal C Runtime Libraries).</p>
+
+<p>You can download it from the official Microsoft website: <a href="https://support.microsoft.com/en-gb/kb/2999226">https://support.microsoft.com/en-gb/kb/2999226</a></p>
+
+<p>or you can find it here on <a href="./redist/wincrt-distributable/">/redist/wincrt-redistributable/</a></p>
+
+<p>Please select the correct installation file for your target os version:</p>
+
+<table>
+<thead>
+<tr>
+<th>Version of Windows in your taget system</th>
+<th>Update Installation File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows Vista 32-bit (not supported by RSAS)</td>
+<td><code>Windows6.0-KB2999226-x86.msu</code></td>
+</tr>
+<tr>
+<td>Windows Vista 64-bit (not supported by RSAS)</td>
+<td><code>Windows6.0-KB2999226-x64.msu</code></td>
+</tr>
+<tr>
+<td>Windows 7 32-bit</td>
+<td><code>Windows6.1-KB2999226-x86.msu</code></td>
+</tr>
+<tr>
+<td>Windows 7 64-bit</td>
+<td><code>Windows6.1-KB2999226-x64.msu</code></td>
+</tr>
+<tr>
+<td>Windows 8.0 (32-bit)</td>
+<td><code>Windows8-RT-KB2999226-x86.msu</code></td>
+</tr>
+<tr>
+<td>Windows 8.0 (64-bit)</td>
+<td><code>Windows8-RT-KB2999226-x64.msu</code></td>
+</tr>
+<tr>
+<td>Windows 8.1 (32-bit)</td>
+<td><code>Windows8.1-KB2999226-x86.msu</code></td>
+</tr>
+<tr>
+<td>Windows 8.1 (64-bit)</td>
+<td><code>Windows8.1-KB2999226-x64.msu</code></td>
+</tr>
+<tr>
+<td>Windows 10 (any)</td>
+<td><em>update not needed</em></td>
+</tr>
+</tbody>
+</table>
+
+<p>After installing the update, you should not need to reboot the system to be able to use RSAS.</p>
+
+<h3>
+<a id="database-customisation" class="anchor" href="#database-customisation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DATABASE CUSTOMISATION:</h3>
+
+<p><code>/dist/rsas.exe</code> embeds the artifacts database.</p>
+
+<p>Before using the embedded database, <code>rsas.exe</code> will look in the folder where itself is currently located for a <code>rsas.sqlite3</code> file. If present, RSAS will attempt to use such external file as artifact database, instead of the embedded one.</p>
+
+<p>This allows the investigators to use their customised artifacts database.</p>
+
+<p>To customise your artifacts database please do as follows:</p>
+
+<ul>
+<li>copy <code>/data/rsas.sqlite3</code> on your favorite location. This is a copy of the same database embedded in <code>rsas.exe</code>
+</li>
+<li>open and edit your copy of <code>rsas.sqlite3</code> using a tool such as <a href="http://sqlitestudio.pl/">SQLite Studio</a>
+</li>
+<li>make sure your version of <code>rsas.sqlite3</code> is located in the same folder as <code>rsas.exe</code>, if you wish <code>rsas.exe</code> to use your database. Move <code>rsas.sqlite3</code> in a different location to make <code>rsas.exe</code> use the embedded database again.</li>
+</ul>
+
+<h3>
+<a id="editing-the-database" class="anchor" href="#editing-the-database" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>EDITING THE DATABASE:</h3>
+
+<p>RSAS does not come yet with a database-editing functionality.
+Please use a tools such as <a href="http://sqlitestudio.pl/">SQLite Studio</a> to edit the database.
+The tables you are likely to be interested in editing are <code>artifacts</code> and <code>apps</code>.</p>
+
+<h4>
+<a id="the-apps-table" class="anchor" href="#the-apps-table" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The <code>apps</code> table:</h4>
+
+<p>You will be interested in the fields <code>id</code> and <code>name</code>.
+Please make sure <code>id</code> is a unique positive integer and <code>name</code> is a string without unusual characters.
+Any other field in the table is not used so far by RSAS, but you might be interested in using them for your own records, as you can save author, link, and other detais for each application.</p>
+
+<h4>
+<a id="the-artifacts-table" class="anchor" href="#the-artifacts-table" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The <code>artifacts</code> table:</h4>
+
+<p>Each artifact description identifies one or more artifacts in the system which belongs to a specific application from the <code>apps</code> table.</p>
+
+<p>Of course each artifact has a unique positive integer <code>id</code> field, and an <code>app</code> field where the <code>id</code> of the corresponding application from the <code>apps</code> table should be stored.</p>
+
+<p>Artifacts are categorised in different types, using positive integers.</p>
+
+<ul>
+<li>Artifact types between 1001 and 1999 are descriptions for <strong>filesystem artifacts</strong>.</li>
+<li>Artifact types between 2001 and 2999 are descriptions for <strong>Windows Registry artifacts</strong>.</li>
+</ul>
+
+<p>Specifically,</p>
+
+<ul>
+<li>Type <code>1001</code> identifies <strong>installation and configuration files</strong>;</li>
+<li>Type <code>1002</code> is dedicated to <strong>Windows Prefetch files</strong>;</li>
+<li>Type <code>2001</code> identifies a <strong>Registry Key, the very presence of which is considered evdence</strong> that the corresponding applicaton was run in the system;</li>
+<li>Type <code>2002</code> identifies a <strong>Registry Key that should contain at least one value corresponding to a specified pattern</strong> for it to be considered evidence that the application was run in the system.</li>
+</ul>
+
+<p>For <strong>Type-1000 artifacts (filesystem artifacts)</strong>, the <code>path</code> field is used to describe the filepath.
+The use of the wildcard <code>*</code> is allowed.
+Do not start the path with the disc unit letter.
+As an example, an artifact such as <code>C:\Windows\Prefetch\ANUBIS.EXE-8351B2F9.pf</code> should be described in the <code>path</code> field with the value <code>Windows\Prefetch\ANUBIS.EXE-*.pf</code>. This is because RSAS will look for that path into each connected hard drive or removable drive (discs and network drives are not included in this search).</p>
+
+<p>For <strong>Type-2000 artifacts (registry artifacts)</strong>, the PATH field is used to describe the Registry Key path.
+The use of the wildcard <code>*</code> is allowed.
+Please make sure the path starts with one of the following short names for the main keys:</p>
+
+<table>
+<thead>
+<tr>
+<th>Short name to be used</th>
+<th>Main Registry Key</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>HKU</code></td>
+<td><code>HKEY_USERS</code></td>
+</tr>
+<tr>
+<td><code>HKCU</code></td>
+<td><code>HKEY_CURRENT_USER</code></td>
+</tr>
+<tr>
+<td><code>HKCR</code></td>
+<td><code>HKEY_CLASSES_ROOT</code></td>
+</tr>
+<tr>
+<td><code>HKLM</code></td>
+<td><code>HKEY_LOCAL_MACHINE</code></td>
+</tr>
+<tr>
+<td><code>HKPD</code></td>
+<td><code>HKEY_PERFORMANCE_DATA</code></td>
+</tr>
+<tr>
+<td><code>HKCC</code></td>
+<td><code>HKEY_CURRENT_CONFIG</code></td>
+</tr>
+<tr>
+<td><code>HKDD</code></td>
+<td><code>HKEY_DYN_DATA</code></td>
+</tr>
+</tbody>
+</table>
+
+<p>Usually, rather than using <code>HKCU\your\path</code>, it is preferrable to use <code>HKU\*\your\path</code>, as this will look into <code>\your\path</code> for the <code>HKEY\{ID}\</code> key of each user, while <code>HKCU</code> is a link to the <code>HKEY\{ID}\</code> key of just the current user, which might not be the user which used the application you are scanning for.</p>
+
+<p>For artifact of type <code>2002</code>, please use the <code>val</code> field to describe how to match the values in the key that will constitues your artifacts. It is highly suggested to make use of keywords with the help of the wildcard <code>*</code>.</p>
+
+<p>Any other field in the artifacts table is not currently used by RSAS. It might be worth using them to indicate in which versions of Windows the described artifact is expected to be found. If the DB will increase in size to the point that the scan will result too slow, future versions of RSAS might include a selective selection of artifacts from the DB, by choosing only those corresponding to the version of Windows of the target system.</p>
+
+<h2>
+<a id="-instructions-for-developers-" class="anchor" href="#-instructions-for-developers-" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>===== INSTRUCTIONS FOR DEVELOPERS: =====</h2>
+
+<h3>
+<a id="source-code" class="anchor" href="#source-code" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>SOURCE CODE:</h3>
+
+<p>RSAS is developed in <a href="https://www.python.org">Python v3.5</a> using <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Object-Oriented Programming</a>.</p>
+
+<p>The Python code is included in the folder <code>/src/</code> and the main file <code>/rsas.py</code></p>
+
+<p>The code is organised in 4 packages:</p>
+
+<table>
+<thead>
+<tr>
+<th>PACKAGE</th>
+<th>DESCRIPTION</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>src.cli</code></td>
+<td>for the <strong>Command Line Interface</strong>
+</td>
+</tr>
+<tr>
+<td><code>src.gui</code></td>
+<td>for the <strong>Graphical User Interface</strong>
+</td>
+</tr>
+<tr>
+<td><code>src.lib</code></td>
+<td>contains the <strong>main libraries</strong>, including <code>CONST</code>, <code>Scanner</code> and all the Object Classes used by <code>Scanner</code> such as <code>Apps</code>, <code>ArtifactRule</code>, and so on</td>
+</tr>
+<tr>
+<td><code>src.db</code></td>
+<td>contanis libraries providing an <strong>interface between RSAS and the chosen database</strong> (<a href="https://sqlite.org/">SQLite v.3</a>)</td>
+</tr>
+</tbody>
+</table>
+
+<h3>
+<a id="database" class="anchor" href="#database" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DATABASE:</h3>
+
+<p>RSAS uses an <a href="https://sqlite.org/">SQLite v.3</a> database containing the Artifact descriptions that RSAS will use to look in the system for traces of removed applications.</p>
+
+<p>The database is stored in <code>/data/rsas.sqlite3</code></p>
+
+<h3>
+<a id="distributable" class="anchor" href="#distributable" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DISTRIBUTABLE:</h3>
+
+<p>The distributable version of the application is a single Windows executable file generated using <a href="http://www.pyinstaller.org/">PyInstaller</a> and stored in <code>/dist/rsas.exe</code></p>
+
+<p>In case you wish to modify the Python code and/or the SQLite DB, please build your new version of rsas.exe using the following command from the Windows Command Prompt:</p>
+
+<p><code>pyinstaller -F rsas.spec</code></p>
+
+<p>Plase make sure first that:</p>
+
+<ul>
+<li>
+<a href="https://www.python.org/">Python 3.5</a> and <a href="http://www.pyinstaller.org/">PyInstaller</a>are propertly installed and configured in your system</li>
+<li>your current working directory is the main directory of the <em>rsas</em> project</li>
+<li>you are not using the <strong>WRONG</strong> command <code>pyinstaller -F rsas.py</code>, as such command would re-generate the <code>rsas.spec</code> file, and the <a href="https://sqlite.org/">SQLite v.3</a> database would <strong>NOT</strong> be embedded in your <code>rsas.exe</code>
+</li>
+</ul>
+
+<p>Please note that the <code>/build/</code> folder is created and used automatically by <a href="http://www.pyinstaller.org/">PyInstaller</a>.</p>
+
+<p>21 Aug 2016</p>
+
+<p><em>Nicola Talin</em>
+<a href="mailto:nt271@kent.ac.uk">nt271@kent.ac.uk</a></p>
+
+      <footer class="site-footer">
+        <span class="site-footer-owner"><a href="https://github.com/nicolatalin/rsas">RSAS</a> is maintained by <a href="https://github.com/nicolatalin">nicolatalin</a>.</span>
+
+        <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
+      </footer>
+
+    </section>
+
+  
+  </body>
+</html>
