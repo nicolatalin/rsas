@@ -1,4 +1,3 @@
-# rsas
 # RSAS Removed Steganography Application Scanner
 
 University of Kent, UK (2016)
@@ -38,7 +37,7 @@ In most cases you will just need:
 
 On Windows 8.1 or earlier, RSAS might throw this error when started:
 
-"The program can't start because api-ms-win-crt-math-l1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem."
+> The program can't start because api-ms-win-crt-math-l1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.
 
 If this is the case, you will need to install in the target system the Windows Update Package KB2999226, which provides WinUCRT (Windows Universal C Runtime Libraries).
 
@@ -82,54 +81,54 @@ Please use a tools such as SQLite Studio (http://sqlitestudio.pl/) to edit the d
 The tables you are likely to be interested in editing are 'artifacts' and 'apps'.
 
 
-#### The APPS table:
+#### The `apps` table:
 
-You will be interested in the fields ID and NAME.
-Please make sure ID is a unique positive integer and NAME is a string without unusual characters.
+You will be interested in the fields `id` and `name`.
+Please make sure `id` is a unique positive integer and `name` is a string without unusual characters.
 Any other field in the table is not used so far by RSAS, but you might be interested in using them for your own records, as you can save author, link, and other detais for each application.
 
 
-#### The ARTIFACTS table:
+#### The `artifacts` table:
 
-Each artifact description identifies one or more artifacts in the system which belongs to a specific application from the APPS table.
+Each artifact description identifies one or more artifacts in the system which belongs to a specific application from the `apps` table.
 
-Of course each artifact has a unique positive integer ID field, and an APP field where the ID of the corresponding application from the APPS table should be stored.
+Of course each artifact has a unique positive integer `id` field, and an `app` field where the `id` of the corresponding application from the `apps` table should be stored.
 
 Artifacts are categorised in different types, using positive integers.
 
-* Artifact types between 1001 and 1999 are descriptions for filesystem artifacts.
-* Artifact types between 2001 and 2999 are descriptions for Windows Registry artifacts.
+* Artifact types between 1001 and 1999 are descriptions for **filesystem artifacts**.
+* Artifact types between 2001 and 2999 are descriptions for **Windows Registry artifacts**.
 
 Specifically,
 
-* Type 1001 identifies installation and configuration files;
-* Type 1002 is dedicated to Windows Prefetch files;
-* Type 2001 identifies a Registry Key, the very presence of which is considered evdence that the corresponding applicaton was run in the system;
-* Type 2002 identifies a Registry Key that should contain at least one value corresponding to a specified pattern for it to be considered evidence that the application was run in the system.
+* Type `1001` identifies **installation and configuration files**;
+* Type `1002` is dedicated to **Windows Prefetch files**;
+* Type `2001` identifies a **Registry Key, the very presence of which is considered evdence** that the corresponding applicaton was run in the system;
+* Type `2002` identifies a **Registry Key that should contain at least one value corresponding to a specified pattern** for it to be considered evidence that the application was run in the system.
 
-For Type-1000 artifacts (filesystem artifacts), the PATH field is used to describe the filepath.
-The use of the wildcard '*' is allowed.
+For **Type-1000 artifacts (filesystem artifacts)**, the `path` field is used to describe the filepath.
+The use of the wildcard `*` is allowed.
 Do not start the path with the disc unit letter.
-As an example, an artifact such as C:\Windows\Prefetch\ANUBIS.EXE-8351B2F9.pf should be described in the PATH field with the value 'Windows\Prefetch\ANUBIS.EXE-*.pf'. This is because RSAS will look for that path into each connected hard drive or removable drive (discs and network drives are not included in this search).
+As an example, an artifact such as `C:\Windows\Prefetch\ANUBIS.EXE-8351B2F9.pf` should be described in the `path` field with the value `Windows\Prefetch\ANUBIS.EXE-*.pf`. This is because RSAS will look for that path into each connected hard drive or removable drive (discs and network drives are not included in this search).
 
 
-For Type-2000 artifacts (registry artifacts), the PATH field is used to describe the Registry Key path.
-The use of the wildcard '*' is allowed.
+For **Type-2000 artifacts (registry artifacts)**, the PATH field is used to describe the Registry Key path.
+The use of the wildcard `*` is allowed.
 Please make sure the path starts with one of the following short names for the main keys:
 
-| Short name to be used | Main Registry Key          |
-|-----------------------|----------------------------|
-| HKCR                  | HKEY_CLASSES_ROOT          |
-| HKU                   | HKEY_USERS                 |
-| HKCU                  | HKEY_CURRENT_USER          |
-| HKLM                  | HKEY_LOCAL_MACHINE         |
-| HKPD                  | HKEY_PERFORMANCE_DATA      |
-| HKCC                  | HKEY_CURRENT_CONFIG        |
-| HKDD                  | HKEY_DYN_DATA              |
+| Short name to be used | Main Registry Ke  y          |
+|-----------------------|------------------------------|
+| `HKU`                 | `HKEY_USERS`                 |
+| `HKCU`                | `HKEY_CURRENT_USER`          |
+| `HKCR`                | `HKEY_CLASSES_ROOT`          |
+| `HKLM`                | `HKEY_LOCAL_MACHINE`         |
+| `HKPD`                | `HKEY_PERFORMANCE_DATA`      |
+| `HKCC`                | `HKEY_CURRENT_CONFIG`        |
+| `HKDD`                | `HKEY_DYN_DATA`              |
 
-Usually, rather than using HKCU\your\path, it is preferrable to use HKU\*\your\path, as this will look into \your\path for the HKEY\{ID}\ key of each user, while HKCU is a link to the HKEY\{ID}\ key of just the current user, which might not be the user which used the application you are scanning for.
+Usually, rather than using `HKCU\your\path`, it is preferrable to use `HKU\*\your\path`, as this will look into `\your\path` for the `HKEY\{ID}\` key of each user, while `HKCU` is a link to the `HKEY\{ID}\` key of just the current user, which might not be the user which used the application you are scanning for.
 
-For artifact of type 2002, please use the VAL field to describe how to match the values in the key that will constitues your artifacts. It is highly suggested to make use of keywords with the help of the wildcard *.
+For artifact of type `2002`, please use the `val` field to describe how to match the values in the key that will constitues your artifacts. It is highly suggested to make use of keywords with the help of the wildcard `*`.
 
 Any other field in the artifacts table is not currently used by RSAS. It might be worth using them to indicate in which versions of Windows the described artifact is expected to be found. If the DB will increase in size to the point that the scan will result too slow, future versions of RSAS might include a selective selection of artifacts from the DB, by choosing only those corresponding to the version of Windows of the target system.
 
@@ -143,13 +142,16 @@ Any other field in the artifacts table is not currently used by RSAS. It might b
 
 RSAS is developed in Python v3.5 using Object-Oriented Programming.
 
-The Python code is included in the folder /src/ and the main file /rsas.py
+The Python code is included in the folder `/src/` and the main file `/rsas.py`
 
 The code is organised in 4 packages:
-* src.cli for the Command Line Interface
-* src.gui for the Graphical User Interface
-* src.lib contains the main libraries, including CONST, Scanner and all the Object Classes used by Scanner such as Apps, ArtifactRule, and so on.
-* src.db contanis libraries providing an interface between RSAS and the chosen database (SQLite v.3)
+
+| PACKAGE   | DESCRIPTION                                       |
+|-----------|---------------------------------------------------|
+| `src.cli` | for the **Command Line Interface**                |
+| `src.gui` | for the **Graphical User Interface**              |
+| `src.lib` | contains the **main libraries**, including `CONST`, `Scanner` and all the Object Classes used by `Scanner` such as `Apps`, `ArtifactRule`, and so on |
+| `src.db` | contanis libraries providing an **interface between RSAS and the chosen database** (SQLite v.3) |
 
 
 
@@ -157,27 +159,27 @@ The code is organised in 4 packages:
 
 RSAS uses an SQLite v.3 database containing the Artifact descriptions that RSAS will use to look in the system for traces of removed applications.
 
-The database is stored in /data/rsas.sqlite3
+The database is stored in `/data/rsas.sqlite3`
 
 
 
 ### DISTRIBUTABLE:
 
-The distributable version of the application is a single Windows executable file generated using PyInstaller (pyinstaller.org) and stored in /dist/rsas.exe
+The distributable version of the application is a single Windows executable file generated using PyInstaller (pyinstaller.org) and stored in `/dist/rsas.exe`
 
 In case you wish to modify the Python code and/or the SQLite DB, please build your new version of rsas.exe using the following command from the Windows Command Prompt:
 
-pyinstaller -F rsas.spec
+`pyinstaller -F rsas.spec`
 
 Plase make sure first that:
 * Python 3.5 and PyInstaller are propertly installed and configured in your system
-* your current working directory is the main directory of rsas
-* you are not using the WRONG command: 'pyinstaller -F rsas.py', as such command would regenerate the .spec file and the SQLite database would NOT be embedded in your rsas.exe
+* your current working directory is the main directory of the *rsas* project
+* you are not using the WRONG command `pyinstaller -F rsas.py`, as such command would regenerate the `rsas.spec` file, and the SQLite database would **NOT** be embedded in your `rsas.exe`
 
-Please note that the /build/ folder is created and used automatically by PyInstaller.
+Please note that the `/build/` folder is created and used automatically by PyInstaller.
 
 
 21 Aug 2016
 
-Mr Nicola Talin
+*Nicola Talin*
 nt271@kent.ac.uk
