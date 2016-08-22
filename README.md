@@ -185,9 +185,9 @@ In case you wish to modify the Python code and/or the SQLite DB, please build yo
 `pyinstaller -F rsas.spec`
 
 Plase make sure first that:
-* [Python 3.5](https://www.python.org/) and [PyInstaller](http://www.pyinstaller.org/)are propertly installed and configured in your system
+* [Python 3.5](https://www.python.org/) and [PyInstaller](http://www.pyinstaller.org/) are propertly installed and configured in your system
 * your current working directory is the main directory of the *rsas* project
-* you are not using the **WRONG** command ~~`pyinstaller -F rsas.py`~~, as such command would re-generate the `rsas.spec` file, and the [SQLite v.3](https://sqlite.org/) database would **NOT** be embedded in your `rsas.exe`
+* you are not using the **WRONG** command `pyinstaller -F rsas.py`, as such command would re-generate the `rsas.spec` file, and the [SQLite v.3](https://sqlite.org/) database would **NOT** be embedded in your `rsas.exe`
 
 Please note that the `/build/` folder is created and used automatically by [PyInstaller](http://www.pyinstaller.org/).
 
