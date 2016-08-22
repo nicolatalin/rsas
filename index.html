@@ -2,20 +2,20 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>RSAS by Nicola Talin</title>
+    <title>RSAS by nicolatalin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-    <base ref="https://github.com/nicolatalin/rsas/">
   </head>
   <body>
     <section class="page-header">
       <h1 class="project-name">RSAS</h1>
       <h2 class="project-tagline">RSAS Removed Steganography Application Scanner</h2>
       <a href="https://github.com/nicolatalin/rsas" class="btn">View on GitHub</a>
-      <a href="https://github.com/nicolatalin/rsas/dist/rsas.exe" class="btn">Download RSAS for Windows</a>
+      <a href="https://github.com/nicolatalin/rsas/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/nicolatalin/rsas/tarball/master" class="btn">Download .tar.gz</a>
     </section>
 
     <section class="main-content">
@@ -65,7 +65,7 @@
 
 <p>In most cases you will just need:</p>
 
-<p><code>/dist/rsas.exe</code></p>
+<p><a href="./dist/rsas.exe"><code>/dist/rsas.exe</code></a></p>
 
 <h3>
 <a id="dependency-issues" class="anchor" href="#dependency-issues" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DEPENDENCY ISSUES:</h3>
@@ -80,7 +80,7 @@
 
 <p>You can download it from the official Microsoft website: <a href="https://support.microsoft.com/en-gb/kb/2999226">https://support.microsoft.com/en-gb/kb/2999226</a></p>
 
-<p>or you can find it here on <a href="./redist/wincrt-distributable/">/redist/wincrt-redistributable/</a></p>
+<p>or you can find it here on /redist/wincrt-redistributable/</p>
 
 <p>Please select the correct installation file for your target os version:</p>
 
@@ -94,35 +94,35 @@
 <tbody>
 <tr>
 <td>Windows Vista 32-bit (not supported by RSAS)</td>
-<td><code>Windows6.0-KB2999226-x86.msu</code></td>
+<td><a href="./redist/wincrt-redistributable/Windows6.0-KB2999226-x86.msu"><code>Windows6.0-KB2999226-x86.msu</code></a></td>
 </tr>
 <tr>
 <td>Windows Vista 64-bit (not supported by RSAS)</td>
-<td><code>Windows6.0-KB2999226-x64.msu</code></td>
+<td><a href="./redist/wincrt-redistributable/Windows6.0-KB2999226-x64.msu"><code>Windows6.0-KB2999226-x64.msu</code></a></td>
 </tr>
 <tr>
 <td>Windows 7 32-bit</td>
-<td><code>Windows6.1-KB2999226-x86.msu</code></td>
+<td><a href="./redist/wincrt-redistributable/Windows6.1-KB2999226-x86.msu"><code>Windows6.1-KB2999226-x86.msu</code></a></td>
 </tr>
 <tr>
 <td>Windows 7 64-bit</td>
-<td><code>Windows6.1-KB2999226-x64.msu</code></td>
+<td><a href="./redist/wincrt-redistributable/Windows6.1-KB2999226-x64.msu"><code>Windows6.1-KB2999226-x64.msu</code></a></td>
 </tr>
 <tr>
 <td>Windows 8.0 (32-bit)</td>
-<td><code>Windows8-RT-KB2999226-x86.msu</code></td>
+<td><a href="./redist/wincrt-redistributable/Windows8-RT-KB2999226-x86.msu"><code>Windows8-RT-KB2999226-x86.msu</code></a></td>
 </tr>
 <tr>
 <td>Windows 8.0 (64-bit)</td>
-<td><code>Windows8-RT-KB2999226-x64.msu</code></td>
+<td><a href="./redist/wincrt-redistributable/Windows8-RT-KB2999226-x64.msu"><code>Windows8-RT-KB2999226-x64.msu</code></a></td>
 </tr>
 <tr>
 <td>Windows 8.1 (32-bit)</td>
-<td><code>Windows8.1-KB2999226-x86.msu</code></td>
+<td><a href="./redist/wincrt-redistributable/Windows8.1-KB2999226-x86.msu"><code>Windows8.1-KB2999226-x86.msu</code></a></td>
 </tr>
 <tr>
 <td>Windows 8.1 (64-bit)</td>
-<td><code>Windows8.1-KB2999226-x64.msu</code></td>
+<td><a href="./redist/wincrt-redistributable/Windows8.1-KB2999226-x64.msu"><code>Windows8.1-KB2999226-x64.msu</code></a></td>
 </tr>
 <tr>
 <td>Windows 10 (any)</td>
@@ -145,7 +145,7 @@
 <p>To customise your artifacts database please do as follows:</p>
 
 <ul>
-<li>copy <code>/data/rsas.sqlite3</code> on your favorite location. This is a copy of the same database embedded in <code>rsas.exe</code>
+<li>copy <a href="./data/rsas.sqlite3"><code>/data/rsas.sqlite3</code></a> on your favorite location. This is a copy of the same database embedded in <code>rsas.exe</code>
 </li>
 <li>open and edit your copy of <code>rsas.sqlite3</code> using a tool such as <a href="http://sqlitestudio.pl/">SQLite Studio</a>
 </li>
@@ -251,7 +251,7 @@ Please make sure the path starts with one of the following short names for the m
 
 <p>RSAS is developed in <a href="https://www.python.org">Python v3.5</a> using <a href="https://en.wikipedia.org/wiki/Object-oriented_programming">Object-Oriented Programming</a>.</p>
 
-<p>The Python code is included in the folder <code>/src/</code> and the main file <code>/rsas.py</code></p>
+<p>The Python code is included in the folder <code>/src/</code> and the main file <code>/rsas.py</code>.</p>
 
 <p>The code is organised in 4 packages:</p>
 
@@ -289,12 +289,12 @@ Please make sure the path starts with one of the following short names for the m
 
 <p>RSAS uses an <a href="https://sqlite.org/">SQLite v.3</a> database containing the Artifact descriptions that RSAS will use to look in the system for traces of removed applications.</p>
 
-<p>The database is stored in <code>/data/rsas.sqlite3</code></p>
+<p>The database is stored in <a href="./data/rsas.sqlite3"><code>/data/rsas.sqlite3</code></a>.</p>
 
 <h3>
 <a id="distributable" class="anchor" href="#distributable" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DISTRIBUTABLE:</h3>
 
-<p>The distributable version of the application is a single Windows executable file generated using <a href="http://www.pyinstaller.org/">PyInstaller</a> and stored in <code>/dist/rsas.exe</code></p>
+<p>The distributable version of the application is a single Windows executable file generated using <a href="http://www.pyinstaller.org/">PyInstaller</a> and stored in <a href="https://github.com/nicolatalin/rsas/dist/rsas.exe"><code>/dist/rsas.exe</code></a>.</p>
 
 <p>In case you wish to modify the Python code and/or the SQLite DB, please build your new version of rsas.exe using the following command from the Windows Command Prompt:</p>
 
@@ -304,7 +304,7 @@ Please make sure the path starts with one of the following short names for the m
 
 <ul>
 <li>
-<a href="https://www.python.org/">Python 3.5</a> and <a href="http://www.pyinstaller.org/">PyInstaller</a>are propertly installed and configured in your system</li>
+<a href="https://www.python.org/">Python 3.5</a> and <a href="http://www.pyinstaller.org/">PyInstaller</a> are propertly installed and configured in your system</li>
 <li>your current working directory is the main directory of the <em>rsas</em> project</li>
 <li>you are not using the <strong>WRONG</strong> command <code>pyinstaller -F rsas.py</code>, as such command would re-generate the <code>rsas.spec</code> file, and the <a href="https://sqlite.org/">SQLite v.3</a> database would <strong>NOT</strong> be embedded in your <code>rsas.exe</code>
 </li>
