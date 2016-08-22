@@ -4,7 +4,7 @@
 
 University of Kent, UK (2016)
 
-School of Computing (cs.kent.ac.uk)
+School of Computing ([cs.kent.ac.uk](http://cs.kent.ac.uk))
 
 Author:
    Mr Nicola Talin
@@ -155,7 +155,7 @@ Any other field in the artifacts table is not currently used by RSAS. It might b
 
 RSAS is developed in [Python v3.5](https://www.python.org) using [Object-Oriented Programming](https://en.wikipedia.org/wiki/Object-oriented_programming).
 
-The Python code is included in the folder `/src/` and the main file `/rsas.py`
+The Python code is included in the folder `/src/` and the main file `/rsas.py`.
 
 The code is organised in 4 packages:
 
@@ -172,13 +172,13 @@ The code is organised in 4 packages:
 
 RSAS uses an [SQLite v.3](https://sqlite.org/) database containing the Artifact descriptions that RSAS will use to look in the system for traces of removed applications.
 
-The database is stored in `/data/rsas.sqlite3`
+The database is stored in [`/data/rsas.sqlite3`](./data/rsas.sqlite3).
 
 
 
 ### DISTRIBUTABLE:
 
-The distributable version of the application is a single Windows executable file generated using [PyInstaller](http://www.pyinstaller.org/) and stored in `/dist/rsas.exe`
+The distributable version of the application is a single Windows executable file generated using [PyInstaller](http://www.pyinstaller.org/) and stored in [`/dist/rsas.exe`](https://github.com/nicolatalin/rsas/dist/rsas.exe).
 
 In case you wish to modify the Python code and/or the SQLite DB, please build your new version of rsas.exe using the following command from the Windows Command Prompt:
 
@@ -187,7 +187,7 @@ In case you wish to modify the Python code and/or the SQLite DB, please build yo
 Plase make sure first that:
 * [Python 3.5](https://www.python.org/) and [PyInstaller](http://www.pyinstaller.org/)are propertly installed and configured in your system
 * your current working directory is the main directory of the *rsas* project
-* you are not using the **WRONG** command `pyinstaller -F rsas.py`, as such command would re-generate the `rsas.spec` file, and the [SQLite v.3](https://sqlite.org/) database would **NOT** be embedded in your `rsas.exe`
+* you are not using the **WRONG** command ~~`pyinstaller -F rsas.py`~~, as such command would re-generate the `rsas.spec` file, and the [SQLite v.3](https://sqlite.org/) database would **NOT** be embedded in your `rsas.exe`
 
 Please note that the `/build/` folder is created and used automatically by [PyInstaller](http://www.pyinstaller.org/).
 
