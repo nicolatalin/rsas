@@ -51,20 +51,20 @@ If this is the case, you will need to install in the target system the Windows U
 
 You can download it from the official Microsoft website: https://support.microsoft.com/en-gb/kb/2999226
 
-or you can find it here on [/redist/wincrt-redistributable/](./redist/wincrt-distributable/)
+or you can find it here on /redist/wincrt-redistributable/
 
 Please select the correct installation file for your target os version:
 
 | Version of Windows in your taget system        | Update Installation File        | 
 |------------------------------------------------|---------------------------------|
-| Windows Vista 32-bit (not supported by RSAS)   | [`Windows6.0-KB2999226-x86.msu`](./redist/wincrt-distributable/Windows6.0-KB2999226-x86.msu')  |
-| Windows Vista 64-bit (not supported by RSAS)   | [`Windows6.0-KB2999226-x64.msu`](./redist/wincrt-distributable/Windows6.0-KB2999226-x64.msu')  |
-| Windows 7 32-bit                               | [`Windows6.1-KB2999226-x86.msu`](./redist/wincrt-distributable/Windows6.1-KB2999226-x86.msu')  |
-| Windows 7 64-bit                               | [`Windows6.1-KB2999226-x64.msu`](./redist/wincrt-distributable/Windows6.1-KB2999226-x64.msu')  |
-| Windows 8.0 (32-bit)                           | [`Windows8-RT-KB2999226-x86.msu`](./redist/wincrt-distributable/Windows8-RT-KB2999226-x86.msu') |
-| Windows 8.0 (64-bit)                           | [`Windows8-RT-KB2999226-x64.msu`](./redist/wincrt-distributable/Windows8-RT-KB2999226-x64.msu') |
-| Windows 8.1 (32-bit)                           | [`Windows8.1-KB2999226-x86.msu`](./redist/wincrt-distributable/Windows8.1-KB2999226-x86.msu')  |
-| Windows 8.1 (64-bit)                           | [`Windows8.1-KB2999226-x64.msu`](./redist/wincrt-distributable/Windows8.1-KB2999226-x64.msu')  |
+| Windows Vista 32-bit (not supported by RSAS)   | [`Windows6.0-KB2999226-x86.msu`](./redist/wincrt-redistributable/Windows6.0-KB2999226-x86.msu')  |
+| Windows Vista 64-bit (not supported by RSAS)   | [`Windows6.0-KB2999226-x64.msu`](./redist/wincrt-redistributable/Windows6.0-KB2999226-x64.msu')  |
+| Windows 7 32-bit                               | [`Windows6.1-KB2999226-x86.msu`](./redist/wincrt-redistributable/Windows6.1-KB2999226-x86.msu')  |
+| Windows 7 64-bit                               | [`Windows6.1-KB2999226-x64.msu`](./redist/wincrt-redistributable/Windows6.1-KB2999226-x64.msu')  |
+| Windows 8.0 (32-bit)                           | [`Windows8-RT-KB2999226-x86.msu`](./redist/wincrt-redistributable/Windows8-RT-KB2999226-x86.msu') |
+| Windows 8.0 (64-bit)                           | [`Windows8-RT-KB2999226-x64.msu`](./redist/wincrt-redistributable/Windows8-RT-KB2999226-x64.msu') |
+| Windows 8.1 (32-bit)                           | [`Windows8.1-KB2999226-x86.msu`](./redist/wincrt-redistributable/Windows8.1-KB2999226-x86.msu')  |
+| Windows 8.1 (64-bit)                           | [`Windows8.1-KB2999226-x64.msu`](./redist/wincrt-redistributable/Windows8.1-KB2999226-x64.msu')  |
 | Windows 10 (any)                               | *update not needed*             |
 
 After installing the update, you should not need to reboot the system to be able to use RSAS.
