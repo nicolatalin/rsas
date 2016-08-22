@@ -23,7 +23,7 @@ DISCLAIMER:
 > The software comes as it is and the authors and the University of Kent take no responsibilities for any damange or consequence of using this software.
 
 LICENSE:
-> This software and its source code are available under [GPL v.3 License](https://github.com/nicolatalin/rsas/LICENSE)
+> This software and its source code are available under [GPL v.3 License](./LICENSE)
 
 
 
@@ -37,7 +37,7 @@ RSAS works on Windows 7, 8 and 10.
 
 In most cases you will just need:
 
-  [`/dist/rsas.exe`](https://github.com/nicolatalin/rsas/dist/rsas.exe)
+  [`/dist/rsas.exe`](./dist/rsas.exe)
 
 
 
@@ -51,20 +51,20 @@ If this is the case, you will need to install in the target system the Windows U
 
 You can download it from the official Microsoft website: https://support.microsoft.com/en-gb/kb/2999226
 
-or you can find it here on [/redist/wincrt-redistributable/](https://github.com/nicolatalin/rsas/redist/wincrt-distributable/)
+or you can find it here on [/redist/wincrt-redistributable/](./redist/wincrt-distributable/)
 
 Please select the correct installation file for your target os version:
 
 | Version of Windows in your taget system        | Update Installation File        | 
 |------------------------------------------------|---------------------------------|
-| Windows Vista 32-bit (not supported by RSAS)   | [`Windows6.0-KB2999226-x86.msu`](https://github.com/nicolatalin/rsas/redist/wincrt-distributable/Windows6.0-KB2999226-x86.msu')  |
-| Windows Vista 64-bit (not supported by RSAS)   | [`Windows6.0-KB2999226-x64.msu`](https://github.com/nicolatalin/rsas/redist/wincrt-distributable/Windows6.0-KB2999226-x64.msu')  |
-| Windows 7 32-bit                               | [`Windows6.1-KB2999226-x86.msu`](https://github.com/nicolatalin/rsas/redist/wincrt-distributable/Windows6.1-KB2999226-x86.msu')  |
-| Windows 7 64-bit                               | [`Windows6.1-KB2999226-x64.msu`](https://github.com/nicolatalin/rsas/redist/wincrt-distributable/Windows6.1-KB2999226-x64.msu')  |
-| Windows 8.0 (32-bit)                           | [`Windows8-RT-KB2999226-x86.msu`](https://github.com/nicolatalin/rsas/redist/wincrt-distributable/Windows8-RT-KB2999226-x86.msu') |
-| Windows 8.0 (64-bit)                           | [`Windows8-RT-KB2999226-x64.msu`](https://github.com/nicolatalin/rsas/redist/wincrt-distributable/Windows8-RT-KB2999226-x64.msu') |
-| Windows 8.1 (32-bit)                           | [`Windows8.1-KB2999226-x86.msu`](https://github.com/nicolatalin/rsas/redist/wincrt-distributable/Windows8.1-KB2999226-x86.msu')  |
-| Windows 8.1 (64-bit)                           | [`Windows8.1-KB2999226-x64.msu`](https://github.com/nicolatalin/rsas/redist/wincrt-distributable/Windows8.1-KB2999226-x64.msu')  |
+| Windows Vista 32-bit (not supported by RSAS)   | [`Windows6.0-KB2999226-x86.msu`](./redist/wincrt-distributable/Windows6.0-KB2999226-x86.msu')  |
+| Windows Vista 64-bit (not supported by RSAS)   | [`Windows6.0-KB2999226-x64.msu`](./redist/wincrt-distributable/Windows6.0-KB2999226-x64.msu')  |
+| Windows 7 32-bit                               | [`Windows6.1-KB2999226-x86.msu`](./redist/wincrt-distributable/Windows6.1-KB2999226-x86.msu')  |
+| Windows 7 64-bit                               | [`Windows6.1-KB2999226-x64.msu`](./redist/wincrt-distributable/Windows6.1-KB2999226-x64.msu')  |
+| Windows 8.0 (32-bit)                           | [`Windows8-RT-KB2999226-x86.msu`](./redist/wincrt-distributable/Windows8-RT-KB2999226-x86.msu') |
+| Windows 8.0 (64-bit)                           | [`Windows8-RT-KB2999226-x64.msu`](./redist/wincrt-distributable/Windows8-RT-KB2999226-x64.msu') |
+| Windows 8.1 (32-bit)                           | [`Windows8.1-KB2999226-x86.msu`](./redist/wincrt-distributable/Windows8.1-KB2999226-x86.msu')  |
+| Windows 8.1 (64-bit)                           | [`Windows8.1-KB2999226-x64.msu`](./redist/wincrt-distributable/Windows8.1-KB2999226-x64.msu')  |
 | Windows 10 (any)                               | *update not needed*             |
 
 After installing the update, you should not need to reboot the system to be able to use RSAS.
@@ -81,7 +81,7 @@ This allows the investigators to use their customised artifacts database.
 
 To customise your artifacts database please do as follows:
 
-* copy [`/data/rsas.sqlite3`](https://github.com/nicolatalin/rsas/data/rsas.sqlite3) on your favorite location. This is a copy of the same database embedded in `rsas.exe`
+* copy [`/data/rsas.sqlite3`](./data/rsas.sqlite3) on your favorite location. This is a copy of the same database embedded in `rsas.exe`
 * open and edit your copy of `rsas.sqlite3` using a tool such as [SQLite Studio](http://sqlitestudio.pl/)
 * make sure your version of `rsas.sqlite3` is located in the same folder as `rsas.exe`, if you wish `rsas.exe` to use your database. Move `rsas.sqlite3` in a different location to make `rsas.exe` use the embedded database again.
 
@@ -172,7 +172,7 @@ The code is organised in 4 packages:
 
 RSAS uses an [SQLite v.3](https://sqlite.org/) database containing the Artifact descriptions that RSAS will use to look in the system for traces of removed applications.
 
-The database is stored in [`/data/rsas.sqlite3`](https://github.com/nicolatalin/rsas/data/rsas.sqlite3).
+The database is stored in [`/data/rsas.sqlite3`](./data/rsas.sqlite3).
 
 
 
