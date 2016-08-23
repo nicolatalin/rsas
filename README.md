@@ -43,9 +43,9 @@ In most cases you will just need:
 
 ### GETTING STARTED WITH RSAS:
 
-First, download [`/dist/rsas.exe`](./dist/rsas.exe).
+First, **download** [`/dist/rsas.exe`](./dist/rsas.exe).
 
-Then, if you wish to use the Command Line Interface (recommended):
+Then, if you wish to use the **Command Line Interface (recommended)**:
 
   1. Open the Start Menu of Windows and type `cmd`. The Command Prompt of Windows will appear in the search results.
   2. Right click on the Command Prompt (`cmd.exe`) and select "run as administrator".
@@ -61,7 +61,7 @@ Then, if you wish to use the Command Line Interface (recommended):
   12. To save a report of your scan use the command: `rsas -e scanvv > report.txt`.
   13. You can see information on RSAS and its authors with the console command `about`.
 
-If instead you wish to use the Graphical User Interface:
+If instead you wish to use the **Graphical User Interface (very basic!)**:
 
   1. Right click on `rsas.exe` and select "run as administrator".
   2. RSAS comes with a minimal graphical interface which is only intended to help the investigators familiarise with the tool. The use of the command line interface is recommended.
@@ -69,6 +69,10 @@ If instead you wish to use the Graphical User Interface:
   4. From the menu, the buttons `Scan`, `ScanV`, and `ScanVV`, will perform a scan of the system and print, with different levels of verbosity, the list of detected applications and artifacts.
   5. From the menu, the button `About` will show information on RSAS and its authors
   6. From the menu, the button `Quit` will close RSAS.
+  7. To save a report:
+    1. Select the scan results from the non-editable textarea using `CTRL`+`A` and copy t with `CTRL`+`C`;
+    2. Open a new empty text file;
+    3. Paste the scan results in the empty text file with `CTRL`+`V` and save it.
 
 
 
