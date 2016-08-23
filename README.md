@@ -41,6 +41,56 @@ In most cases you will just need:
 
 
 
+### GETTING STARTED WITH RSAS
+
+* Download [`/dist/rsas.exe`](./dist/rsas.exe).
+* If you wish to use the Command Line Interface (recommended):
+  1. Open the Start Menu of Windows and type `cmd`. The Command Prompt of Windows will appear in the search results.
+  2. Right click on the Command Prompt (`cmd.exe`) and select "run as administrator".
+  3. Use the command `cd` to navgate to the directory where `rsas.exe` is saved.
+  4. Use the command `rsas -h` to learn which options do you have with RSAS.
+  5. Use `rsas -c` to start an interactive console to use RSAS.
+  6. Use `rsas -e COMMAND` instead to directly execute the RSAS console command `COMMAND` without starting the console.
+  7. The RSAS console command `help` will show what are the RSAS console commands available.
+  8. The RSAS console commands `dbprintapps` and `dbprintarts` will print the applications and their artifacts descriptions from the database.
+  9. The RSAS console command `scan` will scan the system for artifacts matching the descriptions in database and will print a list of the detected applications.
+  10. The RSAS console commands `scanv` and `scanvv` will perform the scan and print the results more verbosely.
+  11. The RSAS console command `quit` will exit the console.
+  12. To save a report of your scan use the command: `rsas -e scanvv > report.txt`
+  13. You can see information on RSAS and its authors with the console command `about`
+* If you wish to use the Graphical User Interface:
+  1. Right click on `rsas.exe` and select "run as administrator".
+  2. RSAS comes with a minimal graphical interface which is only intended to help the investigators familiarise with the tool. The use of the command line interface is recommended.
+  3. From the to menu, the buttons `Apps` and `Arts` will print a list of the applications and of their artifacts from the database.
+  4. From the menu, the buttons `Scan`, `ScanV`, and `ScanVV`, will perform a scan of the system and print, with different levels of verbosity, the list of detected applications and artifacts.
+  5. From the menu, the button `About` will show information on RSAS and its authors
+  6. From the menu, the button `Quit` will close RSAS.
+
+
+
+### RUN RSAS AS ADMINISTRATOR:
+
+You will probably need to run `rsas.exe` as administrator.
+
+#### How?
+> If you whish to use the Graphical User Interface, please right click on `rsas.exe` an select "run as adminstrator" from the contextual menu.
+> 
+> If you wish to use the Command Line Interface, open the Start menu of Windows and type `cmd`. You will see the Command Prompt of Windows (`cmd.exe`) appear in the search results. Right click on it and select "run as administrator".
+> Now use the 'cd' command to navigate to the directory where `rsas.exe` is saved.
+> You can now use RSAS
+
+#### Why?
+> The current user might not have the rights to read some of the files and registry keys that RSAS is looking for to determine which Steganography applications have been run in the system. In order to be able to see and/or read those artifacts, it might be necessary to run RSAS as administrator.
+
+#### What if I don't do it?
+> Well, you will still be able to use RSAS to view the contents of the artifacts database, and you wil be able to read the About information.
+>
+> You can also attempt to run a scan. As soon as RSAS will try to access a resource for which the current users have no right, the scan will abort with a message asking to run RSAS as administrator.
+>
+> If you are using your customised database, including only artifact descriptions matching resources for which the current user has read rights, you might not need to run RSAS as administrator to perform your scan.
+
+
+
 ### DEPENDENCY ISSUES:
 
 On Windows 8.1 or earlier, RSAS might throw this error when started:
@@ -57,10 +107,10 @@ Please select the correct installation file for your target os version:
 
 | Version of Windows in your taget system        | Update Installation File        | 
 |------------------------------------------------|---------------------------------|
-| Windows Vista 32-bit (not supported by RSAS)   | [`Windows6.0-KB2999226-x86.msu`](./redist/wincrt-redistributable/Windows6.0-KB2999226-x86.msu)  |
-| Windows Vista 64-bit (not supported by RSAS)   | [`Windows6.0-KB2999226-x64.msu`](./redist/wincrt-redistributable/Windows6.0-KB2999226-x64.msu)  |
-| Windows 7 32-bit                               | [`Windows6.1-KB2999226-x86.msu`](./redist/wincrt-redistributable/Windows6.1-KB2999226-x86.msu)  |
-| Windows 7 64-bit                               | [`Windows6.1-KB2999226-x64.msu`](./redist/wincrt-redistributable/Windows6.1-KB2999226-x64.msu)  |
+| Windows Vista (32-bit) (not supported by RSAS) | [`Windows6.0-KB2999226-x86.msu`](./redist/wincrt-redistributable/Windows6.0-KB2999226-x86.msu)  |
+| Windows Vista (64-bit) (not supported by RSAS) | [`Windows6.0-KB2999226-x64.msu`](./redist/wincrt-redistributable/Windows6.0-KB2999226-x64.msu)  |
+| Windows 7 (32-bit)                             | [`Windows6.1-KB2999226-x86.msu`](./redist/wincrt-redistributable/Windows6.1-KB2999226-x86.msu)  |
+| Windows 7 (64-bit)                             | [`Windows6.1-KB2999226-x64.msu`](./redist/wincrt-redistributable/Windows6.1-KB2999226-x64.msu)  |
 | Windows 8.0 (32-bit)                           | [`Windows8-RT-KB2999226-x86.msu`](./redist/wincrt-redistributable/Windows8-RT-KB2999226-x86.msu) |
 | Windows 8.0 (64-bit)                           | [`Windows8-RT-KB2999226-x64.msu`](./redist/wincrt-redistributable/Windows8-RT-KB2999226-x64.msu) |
 | Windows 8.1 (32-bit)                           | [`Windows8.1-KB2999226-x86.msu`](./redist/wincrt-redistributable/Windows8.1-KB2999226-x86.msu)  |
@@ -98,7 +148,7 @@ The tables you are likely to be interested in editing are `artifacts` and `apps`
 
 You will be interested in the fields `id` and `name`.
 Please make sure `id` is a unique positive integer and `name` is a string without unusual characters.
-Any other field in the table is not used so far by RSAS, but you might be interested in using them for your own records, as you can save author, link, and other detais for each application.
+Any other field in the table is not used so far by RSAS, but you might be interested in using them for your own records, as you can save author, link, and other details for each application.
 
 
 #### The `artifacts` table:
