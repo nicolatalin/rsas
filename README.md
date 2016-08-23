@@ -25,6 +25,10 @@ DISCLAIMER:
 LICENSE:
 > This software and its source code are available under [GPL v.3 License](./LICENSE)
 
+### [Watch on YouTube: RSAS How to detect if a portable Steganoraphy tool like OpenPuff has been used](https://www.youtube.com/watch?v=xMwhuUgdl5k)
+
+### [Watch on YouTube: RSAS How to detect uninstalled Steganoraphy tools](https://www.youtube.com/watch?v=PJQbkJrY35Y)
+
 
 
 ## ===== INSTRUCTIONS FOR USERS:  =====
@@ -47,6 +51,8 @@ First, **download** [`/dist/rsas.exe`](./dist/rsas.exe).
 
 Then, if you wish to use the **Command Line Interface (recommended)**:
 
+> [Watch on YouTube RSAS Getting started with RSAS command line interface](https://www.youtube.com/watch?v=cF1o0xlFwDg)
+
   1. Open the Start Menu of Windows and type `cmd`. The Command Prompt of Windows will appear in the search results.
   2. Right click on the Command Prompt (`cmd.exe`) and select "run as administrator".
   3. Use the command `cd` to navgate to the directory where `rsas.exe` is saved.
@@ -62,6 +68,8 @@ Then, if you wish to use the **Command Line Interface (recommended)**:
   13. You can see information on RSAS and its authors with the console command `about`.
 
 If instead you wish to use the **Graphical User Interface (very basic!)**:
+
+> [Watch on YouTube RSAS Getting started with RSAS graphical user interface](https://www.youtube.com/watch?v=49MXb5Ie-Bw)
 
   1. Right click on `rsas.exe` and select "run as administrator".
   2. RSAS comes with a minimal graphical interface which is only intended to help the investigators familiarise with the tool. The use of the command line interface is recommended.
@@ -127,11 +135,14 @@ Please select the correct installation file for your target os version:
 
 After installing the update, you should not need to reboot the system to be able to use RSAS.
 
+> [Watch on YouTube RSAS Installing WindowsUCRT to fix dependency error](https://www.youtube.com/watch?v=XmSliFf2ADk)
 
 
 ### DATABASE CUSTOMISATION:
 
 `/dist/rsas.exe` embeds the artifacts database.
+
+> [Watch on YouTube How to use RSAS with a customized external database] (https://www.youtube.com/watch?v=t_SArYF-XUU)
 
 Before using the embedded database, `rsas.exe` will look in the folder where itself is currently located for a `rsas.sqlite3` file. If present, RSAS will attempt to use such external file as artifact database, instead of the embedded one.
 
