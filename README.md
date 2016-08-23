@@ -85,7 +85,7 @@ You will probably need to run `rsas.exe` as administrator.
 > 
 > If you wish to use the Command Line Interface, open the Start menu of Windows and type `cmd`. You will see the Command Prompt of Windows (`cmd.exe`) appear in the search results. Right click on it and select "run as administrator".
 > Now use the 'cd' command to navigate to the directory where `rsas.exe` is saved.
-> You can now use RSAS
+> You can now use RSAS as described above.
 
 #### Why?
 > The current user might not have the rights to read some of the files and registry keys that RSAS is looking for to determine which Steganography applications have been run in the system. In order to be able to see and/or read those artifacts, it might be necessary to run RSAS as administrator.
