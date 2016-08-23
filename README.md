@@ -41,7 +41,7 @@ In most cases you will just need:
 
 
 
-### GETTING STARTED WITH RSAS
+### GETTING STARTED WITH RSAS:
 
 * Download [`/dist/rsas.exe`](./dist/rsas.exe).
 * If you wish to use the Command Line Interface (recommended):
