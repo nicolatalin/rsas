@@ -91,17 +91,17 @@ You will probably need to run `rsas.exe` as administrator.
 > The current user might not have the rights to read some of the files and registry keys that RSAS is looking for to determine which Steganography applications have been run in the system. In order to be able to see and/or read those artifacts, it might be necessary to run RSAS as administrator.
 
 #### What if I don't do it?
-> Well, you will still be able to use RSAS to view the contents of the artifacts database, and you wil be able to read the About information.
+> Well, you will still be able to use RSAS to view the contents of the artifacts database, and you will be able to read the About information.
 >
-> You can also attempt to run a scan. As soon as RSAS will try to access a resource for which the current users have no right, the scan will abort with a message asking to run RSAS as administrator.
+> You can also attempt to run a scan. As soon as RSAS will try to access a resource for which the current users have no rights, the scan will abort with a message asking to run RSAS as administrator.
 >
-> If you are using your customised database, including only artifact descriptions matching resources for which the current user has read rights, you might not need to run RSAS as administrator to perform your scan.
+> If you are using your customized database, including only artifact descriptions matching resources for which the current user has readig rights, you might not need to run RSAS as administrator to perform your scan.
 
 
 
 ### DEPENDENCY ISSUES:
 
-On Windows 8.1 or earlier, RSAS might throw this error when started:
+On Windows 8.1, Windows 8, and Windows 7, RSAS might throw this error when started:
 
 > The program can't start because api-ms-win-crt-math-l1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.
 
