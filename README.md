@@ -95,7 +95,7 @@ You will probably need to run `rsas.exe` as administrator.
 >
 > You can also attempt to run a scan. As soon as RSAS will try to access a resource for which the current users have no rights, the scan will abort with a message asking to run RSAS as administrator.
 >
-> If you are using your customized database, including only artifact descriptions matching resources for which the current user has readig rights, you might not need to run RSAS as administrator to perform your scan.
+> If you are using your customised database, including only artifact descriptions matching resources for which the current user has readig rights, you might not need to run RSAS as administrator to perform your scan.
 
 
 
