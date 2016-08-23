@@ -2,19 +2,21 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>RSAS by Nicola Talin</title>
+    <title>RSAS by nicolatalin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen">
     <link rel="stylesheet" type="text/css" href="stylesheets/github-light.css" media="screen">
-   <style>        .main-content a code {            color: inherit;        }    </style>  </head>
+  </head>
   <body>
     <section class="page-header">
       <h1 class="project-name">RSAS</h1>
       <h2 class="project-tagline">RSAS Removed Steganography Application Scanner</h2>
       <a href="https://github.com/nicolatalin/rsas" class="btn">View on GitHub</a>
-      <a href="https://github.com/nicolatalin/rsas/raw/master/dist/rsas.exe" class="btn">Download RSAS for Windows</a></section>
+      <a href="https://github.com/nicolatalin/rsas/zipball/master" class="btn">Download .zip</a>
+      <a href="https://github.com/nicolatalin/rsas/tarball/master" class="btn">Download .tar.gz</a>
+    </section>
 
     <section class="main-content">
       <h1>
@@ -50,8 +52,16 @@
 <p>LICENSE:</p>
 
 <blockquote>
-<p>This software and its source code are available under <a href="https://github.com/nicolatalin/rsas/raw/master/LICENSE">GPL v.3 License</a></p>
+<p>This software and its source code are available under <a href="./LICENSE">GPL v.3 License</a></p>
 </blockquote>
+
+<h3>
+<a id="watch-on-youtube-rsas-how-to-detect-if-a-portable-steganoraphy-tool-like-openpuff-has-been-used" class="anchor" href="#watch-on-youtube-rsas-how-to-detect-if-a-portable-steganoraphy-tool-like-openpuff-has-been-used" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://www.youtube.com/watch?v=xMwhuUgdl5k">Watch on YouTube: RSAS How to detect if a portable Steganoraphy tool like OpenPuff has been used</a>
+</h3>
+
+<h3>
+<a id="watch-on-youtube-rsas-how-to-detect-uninstalled-steganoraphy-tools" class="anchor" href="#watch-on-youtube-rsas-how-to-detect-uninstalled-steganoraphy-tools" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a><a href="https://www.youtube.com/watch?v=PJQbkJrY35Y">Watch on YouTube: RSAS How to detect uninstalled Steganoraphy tools</a>
+</h3>
 
 <h2>
 <a id="-instructions-for-users--" class="anchor" href="#-instructions-for-users--" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>===== INSTRUCTIONS FOR USERS:  =====</h2>
@@ -63,12 +73,96 @@
 
 <p>In most cases you will just need:</p>
 
-<p><a href="https://github.com/nicolatalin/rsas/raw/master/dist/rsas.exe"><code>/dist/rsas.exe</code></a></p>
+<p><a href="./dist/rsas.exe"><code>/dist/rsas.exe</code></a></p>
+
+<h3>
+<a id="getting-started-with-rsas" class="anchor" href="#getting-started-with-rsas" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>GETTING STARTED WITH RSAS:</h3>
+
+<p>First, <strong>download</strong> <a href="./dist/rsas.exe"><code>/dist/rsas.exe</code></a>.</p>
+
+<p>Then, if you wish to use the <strong>Command Line Interface (recommended)</strong>:</p>
+
+<blockquote>
+<p><a href="https://www.youtube.com/watch?v=cF1o0xlFwDg">Watch on YouTube RSAS Getting started with RSAS command line interface</a></p>
+</blockquote>
+
+<ol>
+<li>Open the Start Menu of Windows and type <code>cmd</code>. The Command Prompt of Windows will appear in the search results.</li>
+<li>Right click on the Command Prompt (<code>cmd.exe</code>) and select "run as administrator".</li>
+<li>Use the command <code>cd</code> to navgate to the directory where <code>rsas.exe</code> is saved.</li>
+<li>Use the command <code>rsas -h</code> to learn which options do you have with RSAS.</li>
+<li>Use <code>rsas -c</code> to start an interactive console to use RSAS.</li>
+<li>Use <code>rsas -e COMMAND</code> instead to directly execute the RSAS console command <code>COMMAND</code> without starting the console.</li>
+<li>The RSAS console command <code>help</code> will show what are the RSAS console commands available.</li>
+<li>The RSAS console commands <code>dbprintapps</code> and <code>dbprintarts</code> will print the applications and their artifacts descriptions from the database.</li>
+<li>The RSAS console command <code>scan</code> will scan the system for artifacts matching the descriptions in database and will print a list of the detected applications.</li>
+<li>The RSAS console commands <code>scanv</code> and <code>scanvv</code> will perform the scan and print the results more verbosely.</li>
+<li>The RSAS console command <code>quit</code> will exit the console.</li>
+<li>To save a report of your scan use the command: <code>rsas -e scanvv &gt; report.txt</code>.</li>
+<li>You can see information on RSAS and its authors with the console command <code>about</code>.</li>
+</ol>
+
+<p>If instead you wish to use the <strong>Graphical User Interface (very basic!)</strong>:</p>
+
+<blockquote>
+<p><a href="https://www.youtube.com/watch?v=49MXb5Ie-Bw">Watch on YouTube RSAS Getting started with RSAS graphical user interface</a></p>
+</blockquote>
+
+<ol>
+<li>Right click on <code>rsas.exe</code> and select "run as administrator".</li>
+<li>RSAS comes with a minimal graphical interface which is only intended to help the investigators familiarise with the tool. The use of the command line interface is recommended.</li>
+<li>From the to menu, the buttons <code>Apps</code> and <code>Arts</code> will print a list of the applications and of their artifacts from the database.</li>
+<li>From the menu, the buttons <code>Scan</code>, <code>ScanV</code>, and <code>ScanVV</code>, will perform a scan of the system and print, with different levels of verbosity, the list of detected applications and artifacts.</li>
+<li>From the menu, the button <code>About</code> will show information on RSAS and its authors</li>
+<li>From the menu, the button <code>Quit</code> will close RSAS.</li>
+<li>To save a report:
+
+<ol>
+<li>Select the scan results from the non-editable textarea using <code>CTRL</code>+<code>A</code> and copy t with <code>CTRL</code>+<code>C</code>;</li>
+<li>Open a new empty text file;</li>
+<li>Paste the scan results in the empty text file with <code>CTRL</code>+<code>V</code> and save it.</li>
+</ol>
+</li>
+</ol>
+
+<h3>
+<a id="run-rsas-as-administrator" class="anchor" href="#run-rsas-as-administrator" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>RUN RSAS AS ADMINISTRATOR:</h3>
+
+<p>You will probably need to run <code>rsas.exe</code> as administrator.</p>
+
+<h4>
+<a id="how" class="anchor" href="#how" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>How?</h4>
+
+<blockquote>
+<p>If you whish to use the Graphical User Interface, please right click on <code>rsas.exe</code> an select "run as adminstrator" from the contextual menu.</p>
+
+<p>If you wish to use the Command Line Interface, open the Start menu of Windows and type <code>cmd</code>. You will see the Command Prompt of Windows (<code>cmd.exe</code>) appear in the search results. Right click on it and select "run as administrator".
+Now use the 'cd' command to navigate to the directory where <code>rsas.exe</code> is saved.
+You can now use RSAS as described above.</p>
+</blockquote>
+
+<h4>
+<a id="why" class="anchor" href="#why" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Why?</h4>
+
+<blockquote>
+<p>The current user might not have the rights to read some of the files and registry keys that RSAS is looking for to determine which Steganography applications have been run in the system. In order to be able to see and/or read those artifacts, it might be necessary to run RSAS as administrator.</p>
+</blockquote>
+
+<h4>
+<a id="what-if-i-dont-do-it" class="anchor" href="#what-if-i-dont-do-it" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>What if I don't do it?</h4>
+
+<blockquote>
+<p>Well, you will still be able to use RSAS to view the contents of the artifacts database, and you will be able to read the About information.</p>
+
+<p>You can also attempt to run a scan. As soon as RSAS will try to access a resource for which the current users have no rights, the scan will abort with a message asking to run RSAS as administrator.</p>
+
+<p>If you are using your customised database, including only artifact descriptions matching resources for which the current user has readig rights, you might not need to run RSAS as administrator to perform your scan.</p>
+</blockquote>
 
 <h3>
 <a id="dependency-issues" class="anchor" href="#dependency-issues" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DEPENDENCY ISSUES:</h3>
 
-<p>On Windows 8.1 or earlier, RSAS might throw this error when started:</p>
+<p>On Windows 8.1, Windows 8, and Windows 7, RSAS might throw this error when started:</p>
 
 <blockquote>
 <p>The program can't start because api-ms-win-crt-math-l1-1-0.dll is missing from your computer. Try reinstalling the program to fix this problem.</p>
@@ -91,36 +185,36 @@
 </thead>
 <tbody>
 <tr>
-<td>Windows Vista 32-bit (not supported by RSAS)</td>
-<td><a href="https://github.com/nicolatalin/rsas/raw/master/redist/wincrt-redistributable/Windows6.0-KB2999226-x86.msu"><code>Windows6.0-KB2999226-x86.msu</code></a></td>
+<td>Windows Vista (32-bit) (not supported by RSAS)</td>
+<td><a href="./redist/wincrt-redistributable/Windows6.0-KB2999226-x86.msu"><code>Windows6.0-KB2999226-x86.msu</code></a></td>
 </tr>
 <tr>
-<td>Windows Vista 64-bit (not supported by RSAS)</td>
-<td><a href="https://github.com/nicolatalin/rsas/raw/master/redist/wincrt-redistributable/Windows6.0-KB2999226-x64.msu"><code>Windows6.0-KB2999226-x64.msu</code></a></td>
+<td>Windows Vista (64-bit) (not supported by RSAS)</td>
+<td><a href="./redist/wincrt-redistributable/Windows6.0-KB2999226-x64.msu"><code>Windows6.0-KB2999226-x64.msu</code></a></td>
 </tr>
 <tr>
-<td>Windows 7 32-bit</td>
-<td><a href="https://github.com/nicolatalin/rsas/raw/master/redist/wincrt-redistributable/Windows6.1-KB2999226-x86.msu"><code>Windows6.1-KB2999226-x86.msu</code></a></td>
+<td>Windows 7 (32-bit)</td>
+<td><a href="./redist/wincrt-redistributable/Windows6.1-KB2999226-x86.msu"><code>Windows6.1-KB2999226-x86.msu</code></a></td>
 </tr>
 <tr>
-<td>Windows 7 64-bit</td>
-<td><a href="https://github.com/nicolatalin/rsas/raw/master/redist/wincrt-redistributable/Windows6.1-KB2999226-x64.msu"><code>Windows6.1-KB2999226-x64.msu</code></a></td>
+<td>Windows 7 (64-bit)</td>
+<td><a href="./redist/wincrt-redistributable/Windows6.1-KB2999226-x64.msu"><code>Windows6.1-KB2999226-x64.msu</code></a></td>
 </tr>
 <tr>
 <td>Windows 8.0 (32-bit)</td>
-<td><a href="https://github.com/nicolatalin/rsas/raw/master/redist/wincrt-redistributable/Windows8-RT-KB2999226-x86.msu"><code>Windows8-RT-KB2999226-x86.msu</code></a></td>
+<td><a href="./redist/wincrt-redistributable/Windows8-RT-KB2999226-x86.msu"><code>Windows8-RT-KB2999226-x86.msu</code></a></td>
 </tr>
 <tr>
 <td>Windows 8.0 (64-bit)</td>
-<td><a href="https://github.com/nicolatalin/rsas/raw/master/redist/wincrt-redistributable/Windows8-RT-KB2999226-x64.msu"><code>Windows8-RT-KB2999226-x64.msu</code></a></td>
+<td><a href="./redist/wincrt-redistributable/Windows8-RT-KB2999226-x64.msu"><code>Windows8-RT-KB2999226-x64.msu</code></a></td>
 </tr>
 <tr>
 <td>Windows 8.1 (32-bit)</td>
-<td><a href="https://github.com/nicolatalin/rsas/raw/master/redist/wincrt-redistributable/Windows8.1-KB2999226-x86.msu"><code>Windows8.1-KB2999226-x86.msu</code></a></td>
+<td><a href="./redist/wincrt-redistributable/Windows8.1-KB2999226-x86.msu"><code>Windows8.1-KB2999226-x86.msu</code></a></td>
 </tr>
 <tr>
 <td>Windows 8.1 (64-bit)</td>
-<td><a href="https://github.com/nicolatalin/rsas/raw/master/redist/wincrt-redistributable/Windows8.1-KB2999226-x64.msu"><code>Windows8.1-KB2999226-x64.msu</code></a></td>
+<td><a href="./redist/wincrt-redistributable/Windows8.1-KB2999226-x64.msu"><code>Windows8.1-KB2999226-x64.msu</code></a></td>
 </tr>
 <tr>
 <td>Windows 10 (any)</td>
@@ -131,10 +225,18 @@
 
 <p>After installing the update, you should not need to reboot the system to be able to use RSAS.</p>
 
+<blockquote>
+<p><a href="https://www.youtube.com/watch?v=XmSliFf2ADk">Watch on YouTube RSAS Installing WindowsUCRT to fix dependency error</a></p>
+</blockquote>
+
 <h3>
 <a id="database-customisation" class="anchor" href="#database-customisation" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DATABASE CUSTOMISATION:</h3>
 
 <p><code>/dist/rsas.exe</code> embeds the artifacts database.</p>
+
+<blockquote>
+<p><a href="https://www.youtube.com/watch?v=t_SArYF-XUU">Watch on YouTube How to use RSAS with a customized external database</a></p>
+</blockquote>
 
 <p>Before using the embedded database, <code>rsas.exe</code> will look in the folder where itself is currently located for a <code>rsas.sqlite3</code> file. If present, RSAS will attempt to use such external file as artifact database, instead of the embedded one.</p>
 
@@ -143,7 +245,7 @@
 <p>To customise your artifacts database please do as follows:</p>
 
 <ul>
-<li>copy <a href="https://github.com/nicolatalin/rsas/raw/master/data/rsas.sqlite3"><code>/data/rsas.sqlite3</code></a> on your favorite location. This is a copy of the same database embedded in <code>rsas.exe</code>
+<li>copy <a href="./data/rsas.sqlite3"><code>/data/rsas.sqlite3</code></a> on your favorite location. This is a copy of the same database embedded in <code>rsas.exe</code>
 </li>
 <li>open and edit your copy of <code>rsas.sqlite3</code> using a tool such as <a href="http://sqlitestudio.pl/">SQLite Studio</a>
 </li>
@@ -162,7 +264,7 @@ The tables you are likely to be interested in editing are <code>artifacts</code>
 
 <p>You will be interested in the fields <code>id</code> and <code>name</code>.
 Please make sure <code>id</code> is a unique positive integer and <code>name</code> is a string without unusual characters.
-Any other field in the table is not used so far by RSAS, but you might be interested in using them for your own records, as you can save author, link, and other detais for each application.</p>
+Any other field in the table is not used so far by RSAS, but you might be interested in using them for your own records, as you can save author, link, and other details for each application.</p>
 
 <h4>
 <a id="the-artifacts-table" class="anchor" href="#the-artifacts-table" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>The <code>artifacts</code> table:</h4>
@@ -287,7 +389,7 @@ Please make sure the path starts with one of the following short names for the m
 
 <p>RSAS uses an <a href="https://sqlite.org/">SQLite v.3</a> database containing the Artifact descriptions that RSAS will use to look in the system for traces of removed applications.</p>
 
-<p>The database is stored in <a href="https://github.com/nicolatalin/rsas/raw/master/data/rsas.sqlite3"><code>/data/rsas.sqlite3</code></a>.</p>
+<p>The database is stored in <a href="./data/rsas.sqlite3"><code>/data/rsas.sqlite3</code></a>.</p>
 
 <h3>
 <a id="distributable" class="anchor" href="#distributable" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>DISTRIBUTABLE:</h3>
@@ -326,4 +428,3 @@ Please make sure the path starts with one of the following short names for the m
   
   </body>
 </html>
-
