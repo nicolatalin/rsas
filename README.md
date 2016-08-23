@@ -43,8 +43,10 @@ In most cases you will just need:
 
 ### GETTING STARTED WITH RSAS:
 
-* Download [`/dist/rsas.exe`](./dist/rsas.exe).
-* If you wish to use the Command Line Interface (recommended):
+First, download [`/dist/rsas.exe`](./dist/rsas.exe).
+
+Then, if you wish to use the Command Line Interface (recommended):
+
   1. Open the Start Menu of Windows and type `cmd`. The Command Prompt of Windows will appear in the search results.
   2. Right click on the Command Prompt (`cmd.exe`) and select "run as administrator".
   3. Use the command `cd` to navgate to the directory where `rsas.exe` is saved.
@@ -56,9 +58,11 @@ In most cases you will just need:
   9. The RSAS console command `scan` will scan the system for artifacts matching the descriptions in database and will print a list of the detected applications.
   10. The RSAS console commands `scanv` and `scanvv` will perform the scan and print the results more verbosely.
   11. The RSAS console command `quit` will exit the console.
-  12. To save a report of your scan use the command: `rsas -e scanvv > report.txt`
-  13. You can see information on RSAS and its authors with the console command `about`
-* If you wish to use the Graphical User Interface:
+  12. To save a report of your scan use the command: `rsas -e scanvv > report.txt`.
+  13. You can see information on RSAS and its authors with the console command `about`.
+
+If instead you wish to use the Graphical User Interface:
+
   1. Right click on `rsas.exe` and select "run as administrator".
   2. RSAS comes with a minimal graphical interface which is only intended to help the investigators familiarise with the tool. The use of the command line interface is recommended.
   3. From the to menu, the buttons `Apps` and `Arts` will print a list of the applications and of their artifacts from the database.
