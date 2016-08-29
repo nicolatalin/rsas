@@ -17,17 +17,17 @@ Supervisor:
 
 ## RSAS is a forensic software which scans the system for traces of removed applications.
 
-RSAS uses a database of forensic artifacts which are left in the system after the removal of Steganography applications, to determine whether any of the applications in the database has ever been run in the target system. This operation is known as Forensic Steganalysis Triage and provides to the investigator in few seconds a report of which Steganography applications have been run in the system, even if such applications have been uninstalled or deleted.
+RSAS uses a database of forensic artifacts which are left in the system after the removal of Steganography applications, to determine whether any of the applications in the database has ever been run on the target system. This operation is known as Forensic Steganalysis Triage and provides to the investigator in few seconds a report of which Steganography applications have been run in the system, even if such applications have been uninstalled or deleted.
 
 DISCLAIMER:
-> The software comes as it is and the authors and the University of Kent take no responsibilities for any damange or consequence of using this software.
+> The software comes as it is and the authors and the University of Kent take no responsibilities for any damage or consequence of using this software.
 
 LICENSE:
 > This software and its source code are available under [GPL v.3 License](./LICENSE)
 
-### [Watch on YouTube: RSAS How to detect if a portable Steganoraphy tool like OpenPuff has been used](https://www.youtube.com/watch?v=xMwhuUgdl5k)
+### [Watch on YouTube: RSAS How to detect if a portable Steganography tool like OpenPuff has been used](https://www.youtube.com/watch?v=xMwhuUgdl5k)
 
-### [Watch on YouTube: RSAS How to detect uninstalled Steganoraphy tools](https://www.youtube.com/watch?v=PJQbkJrY35Y)
+### [Watch on YouTube: RSAS How to detect uninstalled Steganography tools](https://www.youtube.com/watch?v=PJQbkJrY35Y)
 
 
 
@@ -54,14 +54,14 @@ Then, if you wish to use the **Command Line Interface (recommended)**:
 > [Watch on YouTube RSAS Getting started with RSAS command line interface](https://www.youtube.com/watch?v=cF1o0xlFwDg)
 
   1. Open the Start Menu of Windows and type `cmd`. The Command Prompt of Windows will appear in the search results.
-  2. Right click on the Command Prompt (`cmd.exe`) and select "run as administrator".
-  3. Use the command `cd` to navgate to the directory where `rsas.exe` is saved.
+  2. Right-click on the Command Prompt (`cmd.exe`) and select "run as administrator".
+  3. Use the command `cd` to navigate to the directory where `rsas.exe` is saved.
   4. Use the command `rsas -h` to learn which options do you have with RSAS.
   5. Use `rsas -c` to start an interactive console to use RSAS.
   6. Use `rsas -e COMMAND` instead to directly execute the RSAS console command `COMMAND` without starting the console.
   7. The RSAS console command `help` will show what are the RSAS console commands available.
   8. The RSAS console commands `dbprintapps` and `dbprintarts` will print the applications and their artifacts descriptions from the database.
-  9. The RSAS console command `scan` will scan the system for artifacts matching the descriptions in database and will print a list of the detected applications.
+  9. The RSAS console command `scan` will scan the system for artifacts matching the descriptions in the database and will print a list of the detected applications.
   10. The RSAS console commands `scanv` and `scanvv` will perform the scan and print the results more verbosely.
   11. The RSAS console command `quit` will exit the console.
   12. To save a report of your scan use the command: `rsas -e scanvv > report.txt`.
@@ -71,7 +71,7 @@ If instead you wish to use the **Graphical User Interface (very basic!)**:
 
 > [Watch on YouTube RSAS Getting started with RSAS graphical user interface](https://www.youtube.com/watch?v=49MXb5Ie-Bw)
 
-  1. Right click on `rsas.exe` and select "run as administrator".
+  1. Right-click on `rsas.exe` and select "run as administrator".
   2. RSAS comes with a minimal graphical interface which is only intended to help the investigators familiarise with the tool. The use of the command line interface is recommended.
   3. From the to menu, the buttons `Apps` and `Arts` will print a list of the applications and of their artifacts from the database.
   4. From the menu, the buttons `Scan`, `ScanV`, and `ScanVV`, will perform a scan of the system and print, with different levels of verbosity, the list of detected applications and artifacts.
@@ -89,9 +89,9 @@ If instead you wish to use the **Graphical User Interface (very basic!)**:
 You will probably need to run `rsas.exe` as administrator.
 
 #### How?
-> If you whish to use the Graphical User Interface, please right click on `rsas.exe` an select "run as adminstrator" from the contextual menu.
+> If you wish to use the Graphical User Interface, please right click on `rsas.exe` an select "Run as administrator" from the contextual menu.
 > 
-> If you wish to use the Command Line Interface, open the Start menu of Windows and type `cmd`. You will see the Command Prompt of Windows (`cmd.exe`) appear in the search results. Right click on it and select "run as administrator".
+> If you wish to use the Command Line Interface, open the Start menu of Windows and type `cmd`. You will see the Command Prompt of Windows (`cmd.exe`) appear in the search results. Right-click on it and select "run as administrator".
 > Now use the 'cd' command to navigate to the directory where `rsas.exe` is saved.
 > You can now use RSAS as described above.
 
@@ -103,7 +103,7 @@ You will probably need to run `rsas.exe` as administrator.
 >
 > You can also attempt to run a scan. As soon as RSAS will try to access a resource for which the current users have no rights, the scan will abort with a message asking to run RSAS as administrator.
 >
-> If you are using your customised database, including only artifact descriptions matching resources for which the current user has readig rights, you might not need to run RSAS as administrator to perform your scan.
+> If you are using your customised database, including only artifact descriptions matching resources for which the current user has reading rights, you might not need to run RSAS as administrator to perform your scan.
 
 
 
@@ -121,7 +121,7 @@ or you can find it here on /redist/wincrt-redistributable/
 
 Please select the correct installation file for your target os version:
 
-| Version of Windows in your taget system        | Update Installation File        | 
+| Version of Windows in your target system       | Update Installation File        | 
 |------------------------------------------------|---------------------------------|
 | Windows Vista (32-bit) (not supported by RSAS) | [`Windows6.0-KB2999226-x86.msu`](./redist/wincrt-redistributable/Windows6.0-KB2999226-x86.msu)  |
 | Windows Vista (64-bit) (not supported by RSAS) | [`Windows6.0-KB2999226-x64.msu`](./redist/wincrt-redistributable/Windows6.0-KB2999226-x64.msu)  |
@@ -142,7 +142,7 @@ After installing the update, you should not need to reboot the system to be able
 
 `/dist/rsas.exe` embeds the artifacts database.
 
-> [Watch on YouTube How to use RSAS with a customized external database] (https://www.youtube.com/watch?v=t_SArYF-XUU)
+> [Watch on YouTube How to use RSAS with a customised external database] (https://www.youtube.com/watch?v=t_SArYF-XUU)
 
 Before using the embedded database, `rsas.exe` will look in the folder where itself is currently located for a `rsas.sqlite3` file. If present, RSAS will attempt to use such external file as artifact database, instead of the embedded one.
 
@@ -159,7 +159,7 @@ To customise your artifacts database please do as follows:
 ### EDITING THE DATABASE:
 
 RSAS does not come yet with a database-editing functionality.
-Please use a tools such as [SQLite Studio](http://sqlitestudio.pl/) to edit the database.
+Please use a tool such as [SQLite Studio](http://sqlitestudio.pl/) to edit the database.
 The tables you are likely to be interested in editing are `artifacts` and `apps`.
 
 
@@ -172,9 +172,9 @@ Any other field in the table is not used so far by RSAS, but you might be intere
 
 #### The `artifacts` table:
 
-Each artifact description identifies one or more artifacts in the system which belongs to a specific application from the `apps` table.
+Each artifact description identifies one or more artifacts in the system which belong to a specific application from the `apps` table.
 
-Of course each artifact has a unique positive integer `id` field, and an `app` field where the `id` of the corresponding application from the `apps` table should be stored.
+Of course, each artifact has a unique positive integer `id` field, and an `app` field where the `id` of the corresponding application from the `apps` table should be stored.
 
 Artifacts are categorised in different types, using positive integers.
 
@@ -185,7 +185,7 @@ Specifically,
 
 * Type `1001` identifies **installation and configuration files**;
 * Type `1002` is dedicated to **Windows Prefetch files**;
-* Type `2001` identifies a **Registry Key, the very presence of which is considered evdence** that the corresponding applicaton was run in the system;
+* Type `2001` identifies a **Registry Key, the very presence of which is considered evidence** that the corresponding application was run in the system;
 * Type `2002` identifies a **Registry Key that should contain at least one value corresponding to a specified pattern** for it to be considered evidence that the application was run in the system.
 
 For **Type-1000 artifacts (filesystem artifacts)**, the `path` field is used to describe the filepath.
@@ -208,9 +208,9 @@ Please make sure the path starts with one of the following short names for the m
 | `HKCC`                | `HKEY_CURRENT_CONFIG`        |
 | `HKDD`                | `HKEY_DYN_DATA`              |
 
-Usually, rather than using `HKCU\your\path`, it is preferrable to use `HKU\*\your\path`, as this will look into `\your\path` for the `HKEY\{ID}\` key of each user, while `HKCU` is a link to the `HKEY\{ID}\` key of just the current user, which might not be the user which used the application you are scanning for.
+Usually, rather than using `HKCU\your\path`, it is preferable to use `HKU\*\your\path`, as this will look into `\your\path` for the `HKEY\{ID}\` key of each user, while `HKCU` is a link to the `HKEY\{ID}\` key of just the current user, which might not be the user which used the application you are scanning for.
 
-For artifact of type `2002`, please use the `val` field to describe how to match the values in the key that will constitues your artifacts. It is highly suggested to make use of keywords with the help of the wildcard `*`.
+For artifact of type `2002`, please use the `val` field to describe how to match the values in the key that will constitutes your artifacts. It is highly suggested to make use of keywords with the help of the wildcard `*`.
 
 Any other field in the artifacts table is not currently used by RSAS. It might be worth using them to indicate in which versions of Windows the described artifact is expected to be found. If the DB will increase in size to the point that the scan will result too slow, future versions of RSAS might include a selective selection of artifacts from the DB, by choosing only those corresponding to the version of Windows of the target system.
 
@@ -233,7 +233,7 @@ The code is organised in 4 packages:
 | `src.cli` | for the **Command Line Interface**                |
 | `src.gui` | for the **Graphical User Interface**              |
 | `src.lib` | contains the **main libraries**, including `CONST`, `Scanner` and all the Object Classes used by `Scanner` such as `Apps`, `ArtifactRule`, and so on |
-| `src.db` | contanis libraries providing an **interface between RSAS and the chosen database** ([SQLite v.3](https://sqlite.org/)) |
+| `src.db` | contains libraries providing an **interface between RSAS and the chosen database** ([SQLite v.3](https://sqlite.org/)) |
 
 
 
@@ -256,7 +256,7 @@ In case you wish to modify the Python code and/or the SQLite DB, please build yo
 Plase make sure first that:
 * [Python 3.5](https://www.python.org/) and [PyInstaller](http://www.pyinstaller.org/) are propertly installed and configured in your system
 * your current working directory is the main directory of the *rsas* project
-* you are not using the **WRONG** command `pyinstaller -F rsas.py`, as such command would re-generate the `rsas.spec` file, and the [SQLite v.3](https://sqlite.org/) database would **NOT** be embedded in your `rsas.exe`
+* you are not using the **WRONG** command `pyinstaller -F rsas.py`, as such command would regenerate the `rsas.spec` file, and the [SQLite v.3](https://sqlite.org/) database would **NOT** be embedded in your `rsas.exe`
 
 Please note that the `/build/` folder is created and used automatically by [PyInstaller](http://www.pyinstaller.org/).
 
