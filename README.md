@@ -232,7 +232,7 @@ The code is organised in 4 packages:
 |-----------|---------------------------------------------------|
 | `src.cli` | for the **Command Line Interface**                |
 | `src.gui` | for the **Graphical User Interface**              |
-| `src.lib` | contains the **main libraries**, including `CONST`, `Scanner` and all the Object Classes used by `Scanner` such as `Apps`, `ArtifactRule`, and so on |
+| `src.lib` | contains the **main libraries**, including `CONST`, `Scanner` and all the Object Classes used by `Scanner` such as `App`, `ArtifactRule`, `ArtifactFound`, `RegKey`, `RegVal` and so on |
 | `src.db` | contains libraries providing an **interface between RSAS and the chosen database** ([SQLite v.3](https://sqlite.org/)) |
 
 
